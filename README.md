@@ -1,1 +1,1 @@
-# Nolix_Website
+The Nolix website is the website of the Nolix Java library.
