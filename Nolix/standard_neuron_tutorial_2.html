@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nolix</title>
+		<meta name="author" content="Silvan Wyss">
+        <meta name="keywords" content="Java library">
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="headerDiv">
+            <div class="innerHeaderDiv">
+                <div class="titleDiv">
+                    <img class="logoImage" src="Images/nolix_logo.png">
+                    <p class="headerSubTitle">a Java library for business and science</p>
+                </div>
+            </div>
+        </div>
+		<div class="mainDiv">
+            <div class="contentDiv">
+                <h1>Standard neuron tutorial #2</h1>
+
+<pre style='color:#000000;background:#ffffff;'><span style='color:#3f7f59; '>//package declaration</span>
+<span style='color:#7f0055; font-weight:bold; '>package</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>systemTutorial</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>neuroTutorial</span><span style='color:#7f0055; '>;</span>
+
+<span style='color:#3f7f59; '>//own imports</span>
+<span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>common</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>mathematics</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>Calculator</span><span style='color:#7f0055; '>;</span>
+<span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>system</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>neuro</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>StandardNeuron</span><span style='color:#7f0055; '>;</span>
+
+<span style='color:#3f7f59; '>//class</span>
+<span style='color:#3f5fbf; '>/**</span>
+<span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> This class provides a tutorial for the standard neuron class.</span>
+<span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span>
+<span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@author</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>Silvan Wyss</span><span style='color:#3f5fbf; '></span>
+<span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span style='color:#3f5fbf; '>month </span><span style='color:#3f5fbf; '>2016</span><span style='color:#7f9fbf; font-weight:bold; '>-</span><span style='color:#3f5fbf; '>11</span><span style='color:#3f5fbf; '></span>
+<span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span style='color:#3f5fbf; '>lines </span><span style='color:#3f5fbf; '>60</span><span style='color:#3f5fbf; '></span>
+<span style='color:#3f5fbf; '>&#xa0;*/</span>
+<span style='color:#7f0055; font-weight:bold; '>public</span> <span style='color:#7f0055; font-weight:bold; '>final</span> <span style='color:#7f0055; font-weight:bold; '>class</span> StandardNeuronTutorial2 {
+
+	<span style='color:#3f7f59; '>//main method</span>
+	<span style='color:#3f5fbf; '>/**</span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>1</span><span style='color:#3f5fbf; '>. Creates </span><span style='color:#3f5fbf; '>4</span><span style='color:#3f5fbf; '> standard neurons. The output type of the neurons is a floating point number.</span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>2</span><span style='color:#3f5fbf; '>. Sets an output function of the neuron </span><span style='color:#3f5fbf; '>1</span><span style='color:#7f9fbf; font-weight:bold; '>,</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>2</span><span style='color:#7f9fbf; font-weight:bold; '>,</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>3</span><span style='color:#7f9fbf; font-weight:bold; '>,</span><span style='color:#3f5fbf; '> so that these neurons will return a constant value as output.</span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>3</span><span style='color:#3f5fbf; '>. Adds neuron </span><span style='color:#3f5fbf; '>1</span><span style='color:#3f5fbf; '> as triggering neuron to neuron </span><span style='color:#3f5fbf; '>1</span><span style='color:#7f9fbf; font-weight:bold; '>,</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>2</span><span style='color:#7f9fbf; font-weight:bold; '>,</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>3</span><span style='color:#3f5fbf; '>.</span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>4</span><span style='color:#3f5fbf; '>. Adds neuron </span><span style='color:#3f5fbf; '>1</span><span style='color:#7f9fbf; font-weight:bold; '>,</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>2</span><span style='color:#7f9fbf; font-weight:bold; '>,</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>3</span><span style='color:#3f5fbf; '> as input neurons to neuron </span><span style='color:#3f5fbf; '>4</span><span style='color:#3f5fbf; '>.</span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>5</span><span style='color:#3f5fbf; '>. Adds an output function to neuron </span><span style='color:#3f5fbf; '>4</span><span style='color:#7f9fbf; font-weight:bold; '>,</span><span style='color:#3f5fbf; '> so that neuron </span><span style='color:#3f5fbf; '>4</span><span style='color:#3f5fbf; '> will calculate its output as the average of the outputs of its input neurons.</span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>6</span><span style='color:#3f5fbf; '>. Triggers neuron </span><span style='color:#3f5fbf; '>1</span><span style='color:#7f9fbf; font-weight:bold; '>,</span><span style='color:#3f5fbf; '> that then will trigger neuron </span><span style='color:#3f5fbf; '>2</span><span style='color:#7f9fbf; font-weight:bold; '>,</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>3</span><span style='color:#7f9fbf; font-weight:bold; '>,</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>4</span><span style='color:#3f5fbf; '>. The neurons calculate their outputs when they are triggered.</span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>7</span><span style='color:#3f5fbf; '>. Prints out the output of neuron </span><span style='color:#3f5fbf; '>4</span><span style='color:#3f5fbf; '> out to the console.</span>
+<span style='color:#3f5fbf; '>	 */</span>
+	<span style='color:#7f0055; font-weight:bold; '>public</span> <span style='color:#7f0055; font-weight:bold; '>static</span> <span style='color:#7f0055; font-weight:bold; '>void</span> main(<span style='color:#7f0055; font-weight:bold; '>String</span>[] args) {
+		
+		<span style='color:#3f7f59; '>//Creates neuron 1, that will serve as input neuron.</span>
+		<span style='color:#7f0055; font-weight:bold; '>final</span> StandardNeuron&lt;<span style='color:#7f0055; font-weight:bold; '>Double</span>> neuron1 
+		= <span style='color:#7f0055; font-weight:bold; '>new</span> StandardNeuron&lt;<span style='color:#7f0055; font-weight:bold; '>Double</span>>()
+		.setOutputFunction(6.0);
+		
+		<span style='color:#3f7f59; '>//Creates neuron 2, that will serve as input neuron.</span>
+		<span style='color:#7f0055; font-weight:bold; '>final</span> StandardNeuron&lt;<span style='color:#7f0055; font-weight:bold; '>Double</span>> neuron2 
+		= <span style='color:#7f0055; font-weight:bold; '>new</span> StandardNeuron&lt;<span style='color:#7f0055; font-weight:bold; '>Double</span>>()
+		.setOutputFunction(8.0)
+		.addTriggeringNeuron(neuron1);
+		
+		<span style='color:#3f7f59; '>//Creates neuron 3, that will serve as input neuron.</span>
+		<span style='color:#7f0055; font-weight:bold; '>final</span> StandardNeuron&lt;<span style='color:#7f0055; font-weight:bold; '>Double</span>> neuron3
+		= <span style='color:#7f0055; font-weight:bold; '>new</span> StandardNeuron&lt;<span style='color:#7f0055; font-weight:bold; '>Double</span>>()
+		.setOutputFunction(16.0)
+		.addTriggeringNeuron(neuron1);
+				
+		<span style='color:#3f7f59; '>//Creates neuron 4, that will calculate its output as the average of the output of its input neurons.</span>
+		<span style='color:#7f0055; font-weight:bold; '>final</span> StandardNeuron&lt;<span style='color:#7f0055; font-weight:bold; '>Double</span>> neuron4
+		= <span style='color:#7f0055; font-weight:bold; '>new</span> StandardNeuron&lt;<span style='color:#7f0055; font-weight:bold; '>Double</span>>()
+		.addInputNeuron(neuron1)
+		.addInputNeuron(neuron2)
+		.addInputNeuron(neuron3)
+		.setOutputFunction(Calculator.DOUBLE_AVERAGE)
+		.addTriggeringNeuron(neuron1);
+
+		<span style='color:#3f7f59; '>//Triggers neuron 1 and prints out the output of neuron 4 to the console.</span>
+		neuron1.trigger();
+		<span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(<span style='color:#2a00ff; '>"neuron 4 output: "</span> + neuron4.getRefOutput());
+	}
+	
+	<span style='color:#3f7f59; '>//private constructor</span>
+	<span style='color:#3f5fbf; '>/**</span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> Avoids that an instance of this class can be created.</span>
+<span style='color:#3f5fbf; '>	 */</span>
+	<span style='color:#7f0055; font-weight:bold; '>private</span> StandardNeuronTutorial2() {}
+}
+</pre>
+
+            </div>
+            <div class="footerDiv">Copyright by Silvan Wyss, 2017</div>
+        </div>
+    </body>
+</html>

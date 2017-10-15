@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nolix</title>
+		<meta name="author" content="Silvan Wyss">
+        <meta name="keywords" content="Java library">
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="headerDiv">
+            <div class="innerHeaderDiv">
+                <div class="titleDiv">
+                    <img class="logoImage" src="Images/nolix_logo.png">
+                    <p class="headerSubTitle">a Java library for business and science</p>
+                </div>
+            </div>
+        </div>
+		<div class="mainDiv">
+            <div class="contentDiv">
+                <h1>Console client tutorial</h1>
+
+<pre style='color:#000000;background:#ffffff;'><span style='color:#3f7f59; '>//package declaration</span>
+<span style='color:#7f0055; font-weight:bold; '>package</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>systemTutorial</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>consoleClientTutorial</span><span style='color:#7f0055; '>;</span>
+
+<span style='color:#3f7f59; '>//own imports</span>
+<span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>core</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>sequencer</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>Sequencer</span><span style='color:#7f0055; '>;</span>
+<span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>system</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>client</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>Session</span><span style='color:#7f0055; '>;</span>
+<span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>system</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>client</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>StandardApplication</span><span style='color:#7f0055; '>;</span>
+<span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>system</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>consoleClient</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>BlackRedConsoleDesign</span><span style='color:#7f0055; '>;</span>
+<span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>system</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>consoleClient</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>ConsoleBackClient</span><span style='color:#7f0055; '>;</span>
+<span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>system</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>consoleClient</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>ConsoleFrontClient</span><span style='color:#7f0055; '>;</span>
+
+<span style='color:#3f7f59; '>//class</span>
+<span style='color:#3f5fbf; '>/**</span>
+<span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> This class provides a tutorial for the ConsoleClient class.</span>
+<span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span>
+<span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@author</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>Silvan Wyss</span><span style='color:#3f5fbf; '></span>
+<span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span style='color:#3f5fbf; '>month </span><span style='color:#3f5fbf; '>2017</span><span style='color:#7f9fbf; font-weight:bold; '>-</span><span style='color:#3f5fbf; '>08</span><span style='color:#3f5fbf; '></span>
+<span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span style='color:#3f5fbf; '>lines </span><span style='color:#3f5fbf; '>90</span><span style='color:#3f5fbf; '></span>
+<span style='color:#3f5fbf; '>&#xa0;*/</span>
+<span style='color:#7f0055; font-weight:bold; '>public</span> <span style='color:#7f0055; font-weight:bold; '>final</span> <span style='color:#7f0055; font-weight:bold; '>class</span> ConsoleClientTutorial {
+
+	<span style='color:#3f7f59; '>//main method</span>
+	<span style='color:#3f5fbf; '>/**</span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>1</span><span style='color:#3f5fbf; '>. Creates an application for console back clients.</span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>2</span><span style='color:#3f5fbf; '>. Creates a console front client that connects to the application.</span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@param</span><span style='color:#3f5fbf; '> arguments</span>
+<span style='color:#3f5fbf; '>	 */</span>
+	@SuppressWarnings(<span style='color:#2a00ff; '>"resource"</span>)
+	<span style='color:#7f0055; font-weight:bold; '>public</span> <span style='color:#7f0055; font-weight:bold; '>static</span> <span style='color:#7f0055; font-weight:bold; '>void</span> main(<span style='color:#7f0055; font-weight:bold; '>final</span> <span style='color:#7f0055; font-weight:bold; '>String</span>[] arguments) {
+		
+		<span style='color:#3f7f59; '>//Creates an application.</span>
+		<span style='color:#7f0055; font-weight:bold; '>final</span> StandardApplication&lt;ConsoleBackClient> application
+		= <span style='color:#7f0055; font-weight:bold; '>new</span> StandardApplication&lt;ConsoleBackClient>(
+			<span style='color:#2a00ff; '>"MyApplication"</span>,
+			MainSession.class
+		);
+		
+		<span style='color:#3f7f59; '>//Creates a console front client that connects to the application.</span>
+		<span style='color:#7f0055; font-weight:bold; '>new</span> ConsoleFrontClient(application);
+	}
+	
+	<span style='color:#3f7f59; '>//inner class</span>
+	<span style='color:#7f0055; font-weight:bold; '>private</span> <span style='color:#7f0055; font-weight:bold; '>static</span> <span style='color:#7f0055; font-weight:bold; '>final</span> <span style='color:#7f0055; font-weight:bold; '>class</span> MainSession <span style='color:#7f0055; font-weight:bold; '>extends</span> Session&lt;ConsoleBackClient> {
+		
+		<span style='color:#3f7f59; '>//method</span>
+		<span style='color:#3f5fbf; '>/**</span>
+<span style='color:#3f5fbf; '>		 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> Initializes this main session.</span>
+<span style='color:#3f5fbf; '>		 */</span>
+		<span style='color:#7f0055; font-weight:bold; '>public</span> <span style='color:#7f0055; font-weight:bold; '>void</span> initialize() {
+			
+			getRefClient().setDesign(<span style='color:#7f0055; font-weight:bold; '>new</span> BlackRedConsoleDesign());
+			
+			getRefClient().writeLineToInfoPanel(
+				<span style='color:#2a00ff; '>"This is the info panel of the console."</span>,
+				<span style='color:#2a00ff; '>"On the info panel informatiosn can be displayed."</span>,
+				<span style='color:#2a00ff; '>"The info panel cannot be edited."</span>
+			);
+			
+			getRefClient().writeLineToConsole(<span style='color:#2a00ff; '>"Enter your name."</span>);
+			<span style='color:#7f0055; font-weight:bold; '>final</span> <span style='color:#7f0055; font-weight:bold; '>String</span> name = getRefClient().readLineFromConsole();
+			
+			getRefClient().writeLineToConsole(<span style='color:#2a00ff; '>"Hello "</span> + name + <span style='color:#2a00ff; '>"."</span>);
+						
+			<span style='color:#7f0055; font-weight:bold; '>boolean</span> answerIsValid = <span style='color:#7f0055; font-weight:bold; '>false</span>;
+			<span style='color:#7f0055; font-weight:bold; '>do</span> {
+				
+				getRefClient().writeLineToConsole(<span style='color:#2a00ff; '>"Are you fine? Press y for yes, press n for no."</span>);
+				
+				<span style='color:#7f0055; font-weight:bold; '>switch</span> (getRefClient().readCharacterFromConsole()) {
+					<span style='color:#7f0055; font-weight:bold; '>case</span> <span style='color:#2a00ff; '>'y'</span>:
+						answerIsValid = <span style='color:#7f0055; font-weight:bold; '>true</span>;
+						getRefClient().writeLineToConsole(<span style='color:#2a00ff; '>"Oh good!"</span>);
+						<span style='color:#7f0055; font-weight:bold; '>break</span>;
+					<span style='color:#7f0055; font-weight:bold; '>case</span> <span style='color:#2a00ff; '>'n'</span>:
+						answerIsValid = <span style='color:#7f0055; font-weight:bold; '>true</span>;
+						getRefClient().writeLineToConsole(<span style='color:#2a00ff; '>"Oh sad!"</span>);
+						<span style='color:#7f0055; font-weight:bold; '>break</span>;
+				}
+			} <span style='color:#7f0055; font-weight:bold; '>while</span> (!answerIsValid);
+			
+			Sequencer.waitForMilliseconds(1000);
+			
+			getRefClient()
+			.writeEmptyLineToConsole()
+			.writeLineToConsole(<span style='color:#2a00ff; '>"Press enter to quit the program."</span>)
+			.readEnterFromConsole();
+			
+			getRefClient().quit();
+		}
+	}
+	
+	<span style='color:#3f7f59; '>//private constructor</span>
+	<span style='color:#3f5fbf; '>/**</span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> Avoids that an instance of this class can be created.</span>
+<span style='color:#3f5fbf; '>	 */</span>
+	<span style='color:#7f0055; font-weight:bold; '>private</span> ConsoleClientTutorial() {}
+}
+</pre>
+
+            </div>
+            <div class="footerDiv">Copyright by Silvan Wyss, 2017</div>
+        </div>
+    </body>
+</html>

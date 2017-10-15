@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nolix</title>
+		<meta name="author" content="Silvan Wyss">
+        <meta name="keywords" content="Java library, neuronal net">
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="headerDiv">
+            <div class="innerHeaderDiv">
+                <div class="titleDiv">
+                    <img class="logoImage" src="Images/nolix_logo.png">
+                    <p class="headerSubTitle">a Java library for business and science</p>
+                </div>
+            </div>
+        </div>
+		<div class="mainDiv">
+            <div class="contentDiv">
+                <h1>Forward multilayer net creator tutorial</h1>
+
+<pre style='color:#000000;background:#ffffff;'><span style='color:#3f7f59; '>//package declaration</span>
+<span style='color:#7f0055; font-weight:bold; '>package</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>systemTutorial</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>neuroTutorial</span><span style='color:#7f0055; '>;</span>
+
+<span style='color:#3f7f59; '>//own imports</span>
+<span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>common</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>container</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>List</span><span style='color:#7f0055; '>;</span>
+<span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>common</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>mathematics</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>Calculator</span><span style='color:#7f0055; '>;</span>
+<span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>common</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>sequencer</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>Sequencer</span><span style='color:#7f0055; '>;</span>
+<span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>system</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>neuro</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>ForwardMultiLayerNetCreator</span><span style='color:#7f0055; '>;</span>
+<span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>system</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>neuro</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>NeuronalNet</span><span style='color:#7f0055; '>;</span>
+<span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>system</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>neuro</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>SourceNeuron</span><span style='color:#7f0055; '>;</span>
+
+<span style='color:#3f7f59; '>//class</span>
+<span style='color:#3f5fbf; '>/**</span>
+<span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> This class provides a tutorial for the forward multi layer net creator class.</span>
+<span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span>
+<span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@author</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>Silvan Wyss</span><span style='color:#3f5fbf; '></span>
+<span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span style='color:#3f5fbf; '>month </span><span style='color:#3f5fbf; '>2017</span><span style='color:#7f9fbf; font-weight:bold; '>-</span><span style='color:#3f5fbf; '>01</span><span style='color:#3f5fbf; '></span>
+<span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span style='color:#3f5fbf; '>lines </span><span style='color:#3f5fbf; '>50</span><span style='color:#3f5fbf; '></span>
+<span style='color:#3f5fbf; '>&#xa0;*/</span>
+<span style='color:#7f0055; font-weight:bold; '>public</span> <span style='color:#7f0055; font-weight:bold; '>final</span> <span style='color:#7f0055; font-weight:bold; '>class</span> ForwardMultiLayerNetCreatorTutorial {
+
+	<span style='color:#3f7f59; '>//main method</span>
+	<span style='color:#3f5fbf; '>/**</span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>1</span><span style='color:#3f5fbf; '>. Creates neuronal net creator.</span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>2</span><span style='color:#3f5fbf; '>. Lets the neuronal net creator create a neuronal net.</span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>3</span><span style='color:#3f5fbf; '>. Creates the inputs for the neuronal net.</span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>4</span><span style='color:#3f5fbf; '>. Triggers the neuronal net and prints out its output to the console.</span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span>
+<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@param</span><span style='color:#3f5fbf; '> arguments</span>
+<span style='color:#3f5fbf; '>	 */</span>
+	<span style='color:#7f0055; font-weight:bold; '>public</span> <span style='color:#7f0055; font-weight:bold; '>static</span> <span style='color:#7f0055; font-weight:bold; '>void</span> main(<span style='color:#7f0055; font-weight:bold; '>final</span> <span style='color:#7f0055; font-weight:bold; '>String</span>[] aruments) {
+		
+		<span style='color:#3f7f59; '>//Creates neuronal net creator.</span>
+		<span style='color:#7f0055; font-weight:bold; '>final</span> ForwardMultiLayerNetCreator&lt;<span style='color:#7f0055; font-weight:bold; '>Double</span>> neuronalNetCreator =
+		<span style='color:#7f0055; font-weight:bold; '>new</span> ForwardMultiLayerNetCreator&lt;<span style='color:#7f0055; font-weight:bold; '>Double</span>>()
+		.setLayerCount(4)
+		.setNeuronsPerLayer(5)
+		.setOutputFunction(Calculator.DOUBLE_SUM);
+		
+		<span style='color:#3f7f59; '>//Lets the neuronal net creator create a neuronal net.</span>
+		<span style='color:#7f0055; font-weight:bold; '>final</span> NeuronalNet&lt;<span style='color:#7f0055; font-weight:bold; '>Double</span>> neuronalNet = neuronalNetCreator.createNeuronalNet();
+		
+		<span style='color:#3f7f59; '>//Creates the inputs and sets them to the neuronal net.</span>
+		<span style='color:#7f0055; font-weight:bold; '>final</span> <span style='color:#7f0055; font-weight:bold; '>List</span>&lt;<span style='color:#7f0055; font-weight:bold; '>Double</span>> inputs = <span style='color:#7f0055; font-weight:bold; '>new</span> <span style='color:#7f0055; font-weight:bold; '>List</span>&lt;<span style='color:#7f0055; font-weight:bold; '>Double</span>>();
+		Sequencer.forCount(5).run(() -> inputs.addAtEnd(0.01));
+		neuronalNet.addInputNeuron(<span style='color:#7f0055; font-weight:bold; '>new</span> SourceNeuron&lt;Iterable&lt;<span style='color:#7f0055; font-weight:bold; '>Double</span>>>(inputs));
+		
+		<span style='color:#3f7f59; '>//Triggers the neuronal net prints out its output to the console.</span>
+		neuronalNet.trigger();
+		<span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(<span style='color:#2a00ff; '>"output values:"</span>);
+		<span style='color:#7f0055; font-weight:bold; '>for</span> (<span style='color:#7f0055; font-weight:bold; '>Double</span> v: neuronalNet.getRefOutput()) {
+			<span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(v);
+		}
+	}
+}
+</pre>
+
+            </div>
+            <div class="footerDiv">Copyright by Silvan Wyss, 2017</div>
+        </div>
+    </body>
+</html>
