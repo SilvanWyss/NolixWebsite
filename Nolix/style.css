@@ -64,6 +64,18 @@ tr {
     vertical-align: top;
 }
 
+.blockLink {
+    display: block;
+}
+
+.blockLink, .link {
+    color: #000080;
+}
+
+.blockLink:hover, .link:hover {
+    color: #0000F0;
+}
+
 .button {
     display: block;
     margin-bottom: 20px;
@@ -224,14 +236,6 @@ tr {
 .innerHeaderDiv {
     margin: 0 auto;
     width: 1000px; 
-}
-
-.link {
-    color: #000080;
-}
-
-.link:hover {
-    color: #0000F0;
 }
 
 .logoImage {
