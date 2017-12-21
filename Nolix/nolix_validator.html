@@ -12,6 +12,10 @@
                 <div class="titleDiv">
                     <img class="logoImage" src="Images/nolix_logo.png">
                     <p class="headerSubTitle">a Java library for business and science</p>
+                    <div class="headerLinkDiv">
+                        <a href="download.html" class="link">Download</a>
+                        <a href="Javadoc/overview-summary.html" target="_blank" class="link">Javadoc</a>
+                    </div>
                 </div>
                 <div class="navigationDiv">
                     <div class="tab">
@@ -64,7 +68,7 @@
                     </tr>
                     <tr>
                         <th>Usability</th>
-                        <td>Nolix validator provides various functionalities to test if <b>arguments</b> fulfil the required conditions.</td>
+                        <td>Provides functions to validate arguments.</td>
                     </tr>
                     <tr>
                         <th>Tutorials</th>
@@ -74,6 +78,28 @@
                         </td>
                     </tr>
                 </table>
+                <br>
+                <h2>How to validate that a parameter is positive</h2>
+                <p class="codeBlock">
+                    public void addAmount(int amount) {<br>
+                    &nbsp;&nbsp;Validator.suppose(amount).isPositive();<br>
+                    &nbsp;&nbsp;...<br>
+                    }
+                </p>
+                <h2>How to validate that a named parameter is positve</h2>
+                <p class="codeBlock">
+                        public void addAmount(int amount) {<br>
+                        &nbsp;&nbsp;Validator.suppose(amount).thatIsNamed("amount").isPositive();<br>
+                        &nbsp;&nbsp;...<br>
+                        }
+                </p>
+                <h2>How to validate that several strings are not empty</h2>
+                <p class="codeBlock">
+                        public void addAmount(String[] names) {<br>
+                        &nbsp;&nbsp;Validator.supposeTheStrings(names).areNotEmpty();<br>
+                        &nbsp;&nbsp;...<br>
+                        }
+                </p>
             </div>
             <div class="footerDiv">Copyright @ Silvan Wyss, 2018</div>
         </div>

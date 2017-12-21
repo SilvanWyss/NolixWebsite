@@ -12,6 +12,10 @@
                 <div class="titleDiv">
                     <img class="logoImage" src="Images/nolix_logo.png">
                     <p class="headerSubTitle">a Java library for business and science</p>
+                    <div class="headerLinkDiv">
+                        <a href="download.html" class="link">Download</a>
+                        <a href="Javadoc/overview-summary.html" target="_blank" class="link">Javadoc</a>
+                    </div>
                 </div>
                 <div class="navigationDiv">
                     <div class="tab">
@@ -51,7 +55,11 @@
         </div>
         <div class="mainDiv">
             <div class="contentDiv">
-                <h1>Nolix console clients</h1>             
+                <h1>Nolix console clients</h1>
+                <div class="containerDiv">
+                    <img src="Images/grey_blue_console_design.png" class="image">
+                    <img src="Images/green_console_design.png" class="image">
+                </div>             
                 <table>
                     <tr>
                         <th>Packages</th>
@@ -64,7 +72,7 @@
                     </tr>
                     <tr>
                         <th>Usability</th>
-                        <td>Nolix console clients provide a console and connect to a console client application. Console client applications are client-server-programs.</td>
+                        <td>Provides console applications as client-server-programs.</td>
                     </tr>
                     <tr>
                         <th>Tutorials</th>
@@ -74,27 +82,28 @@
                         </td>
                     </tr>
                 </table>
-                <div class="fillDiv"></div>
-                <div class="containerDiv">
-                    <div class="imageDiv">
-                        <img src="Images/grey_blue_console_design.png">
-                        <div class="imagePopupDiv">
-                            <img src="Images/grey_blue_console_design.png">
-                        </div>
-                    </div>
-                    <div class="imageDiv">
-                        <img src="Images/black_red_console_design.png">
-                        <div class="imagePopupDiv">
-                            <img src="Images/black_red_console_design.png">
-                        </div>
-                    </div>
-                    <div class="imageDiv">
-                        <img src="Images/green_console_design.png">
-                        <div class="imagePopupDiv">
-                            <img src="Images/green_console_design.png">
-                        </div>
-                    </div>
-                </div>
+                <br>                     
+                <h2>How to create a server</h2>
+                <p class="codeBlock">Server server = new Server(50000);</p>
+                <h2>How to create a console client application</h2>
+                <p class="codeBlock">
+                    StandardApplication&ltConsoleClient&gt application = new StandardApplication&lt&gt("Demo", MySession.class);<br>
+                    <br>
+                    server.addApplication(application);
+                </p>
+                <h2>How to define a console client session class</h2>
+                <p class="codeBlock">
+                    public class MySession extends Session&ltConsoleClient&gt {<br>
+                    <br>
+                    &nbsp;&nbsp;public void initailize() {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;getRefClient().writeLineToConsole("Welcome!");<br>
+                    &nbsp;&nbsp;}<br>
+                    }<br>
+                </p>
+                <h2>How to create a console front client</h2>
+                <p class="codeBlock">
+                    ConsoleFrontClient consoleClient = new ConsoleFrontClient("151.248.218.157", 50000, "Demo");
+                </p>
             </div>
             <div class="footerDiv">Copyright @ Silvan Wyss, 2018</div>
         </div>

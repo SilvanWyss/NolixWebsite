@@ -12,6 +12,10 @@
                 <div class="titleDiv">
                     <img class="logoImage" src="Images/nolix_logo.png">
                     <p class="headerSubTitle">a Java library for business and science</p>
+                    <div class="headerLinkDiv">
+                        <a href="download.html" class="link">Download</a>
+                        <a href="Javadoc/overview-summary.html" target="_blank" class="link">Javadoc</a>
+                    </div>
                 </div>
                 <div class="navigationDiv">
                     <div class="tab">
@@ -64,9 +68,20 @@
                     </tr>
                     <tr>
                         <th>Usability</th>
-                        <td>Nolix sequencer allows to run methods in background in separated threads. Nolix sequencer provides multithreading.</td>
+                        <td>Enables functions to run in background.</td>
                     </tr>
-                 </table>
+                </table>
+                <h2>How to run a method in background</h2>
+                <p class="codeBlock">Sequencer.runInBackground(() -> doCalculations());</p>
+                <h2>How to check if a background run is finished</h2>
+                <p class="codeBlock">
+                        Future future = Sequencer.runInBackground(() -> doCalculations());<br>
+                        ...<br>
+                        if (future.isFinishedSuccessfully()) {<br>
+                        ...
+                </p>
+                <h2>How to sleep for 500 milliseconds</h2>
+                <p class="codeBlock">Sequencer.waitForMilliseocnds(500);</p>
             </div>
             <div class="footerDiv">Copyright @ Silvan Wyss, 2018</div>
         </div>

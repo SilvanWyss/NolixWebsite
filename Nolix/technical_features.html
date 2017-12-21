@@ -12,6 +12,10 @@
                 <div class="titleDiv">
                     <img class="logoImage" src="Images/nolix_logo.png">
                     <p class="headerSubTitle">a Java library for business and science</p>
+                    <div class="headerLinkDiv">
+                        <a href="download.html" class="link">Download</a>
+                        <a href="Javadoc/overview-summary.html" target="_blank" class="link">Javadoc</a>
+                    </div>
                 </div>
                 <div class="navigationDiv">
                     <div class="tab">
@@ -51,37 +55,26 @@
         </div>
         <div class="mainDiv">
             <div class="contentDiv">
-                <a href="download.html" class="link">Download</a>
                 <div class="fillDiv"></div>
-                <div>
-                    <a href="nolix_sequencer.html" class="featureDiv">
-                        <div class="featurePopupDiv">
-                            <br>
-                            Sequencer.waitUntil(() -> receivedSignal());
-                            <br><br><br>
-                            Sequencer.runInBackground(() -> matrix.getRank());
-                        </div>
-                        Nolix sequencer
-                    </a>
-                    <a href="nolix_sequencer.html" class="featureDiv">
-                        <div class="featurePopupDiv">
-                            <br>
-                            Validator.suppose(amount).isNotNegative();
-                            <br><br><br>
-                            Validator.suppose(name).isNotEmpty();
-                        </div>
-                        Nolix validator
-                    </a>
-                    <a href="nolix_tests.html" class="featureDiv">
-                        <div class="featurePopupDiv">
-                            <br>
-                            expect(value).isBiggerThan(100);
-                            <br><br><br>
-                            expect(fruits.containsEqualing("banana"));
-                        </div>
-                        Nolix tests
-                    </a>
-                </div>
+                <table>
+                    <tr>
+                        <th>
+                            <a href="nolix_sequencer.html" class="link">Nolix&nbsp;sequencer</a>
+                        </th>
+                        <td>Enables functions to run in background.</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <a href="nolix_tests.html" class="link">Nolix&nbsp;tests</a>
+                        </th>
+                        <td>Provides base classes for unit tests and integration tests.</td>
+                    <tr>
+                        <th>
+                            <a href="nolix_validator.html" class="link">Nolix&nbsp;validator</a>
+                        </th>
+                        <td>Provides functions to validate arguments.</td>
+                    </tr>
+                </table>               
             </div>
             <div class="footerDiv">Copyright @ Silvan Wyss, 2018</div>
         </div>
