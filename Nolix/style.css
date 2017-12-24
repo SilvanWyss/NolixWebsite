@@ -68,27 +68,22 @@ tr {
     display: block;
 }
 
-.blockLink, .link {
-    color: #000080;
-}
-
-.blockLink:hover, .link:hover {
-    color: #0000F0;
-}
-
 .button {
     display: block;
     margin-bottom: 20px;
     width: 180px;
-    background-color: #6080A0;
+    background-color: #C00000;
     padding: 5px;
     text-align: center;
+}
+
+.button * {
     color: white;
 }
 
 .button:hover {
     transition: 200ms;
-    background-color: #204060;
+    background-color: red;
 }
 
 .codeBlock {
@@ -125,12 +120,12 @@ tr {
 }
 
 .footerDiv {
+    margin-top: 50px;
     margin-bottom: 100px;
     border-top-style: solid;
     border-top-width: 1px;
-    border-top-color: #808080;
-    font-size: 16px;
-    color: #808080;
+    border-top-color: #A0A0A0;
+    color: #A0A0A0;
 }
 
 .headerDiv {
@@ -154,7 +149,6 @@ tr {
     margin-top: 35px;
     font-size: 25px;
     font-style: italic;
-    color: #202020;
 }
 
 .icon {
@@ -189,6 +183,14 @@ tr {
     width: 1000px; 
 }
 
+.link, .blockLink {
+    color: #C00000;
+}
+
+.link:hover, .blockLink:hover {
+    color: red;
+}
+
 .logoImage {
     float: left;
     margin-right: 20px;
@@ -216,7 +218,7 @@ tr {
 .subNavigationDiv {
     display: none;
     position: fixed;
-    background-color: #202020;
+    background-color: #A0A0A0;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -231,9 +233,9 @@ tr {
     color: white;
 }
 
-.subNavigationLink:hover, .subNavigationOverviewLink:hover, .currentSubNavigationLink:hover, .currentSubNavigationOverviewLink:hover {
+.subNavigationLink:hover, .currentSubNavigationLink:hover, .subNavigationOverviewLink:hover, .currentSubNavigationOverviewLink:hover {
     transition: 200ms;
-    background-color: #808080;
+    background-color: #C00000;
 }
 
 .subNavigationOverviewLink, .currentSubNavigationOverviewLink {
@@ -247,8 +249,8 @@ tr {
 
 .tab:hover {
     transition: 200ms;
-    background-color: #202020;
     cursor: pointer;
+    background-color: #C00000;
 }
 
 .tab:hover .subNavigationDiv {
@@ -263,10 +265,6 @@ tr {
     font-size: 25px;
     color: white;
     transition: 0.2s;
-}
-
-.tabHeader:hover, .currentTabHeader {
-    background-color: #202020;
 }
 
 .textLine {
