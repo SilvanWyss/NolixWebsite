@@ -3,7 +3,7 @@
     <head>
         <title>Nolix</title>
         <meta name="author" content="Silvan Wyss">
-        <meta name="keywords" content="Java library">
+        <meta name="keywords" content="Java library, containers">
         <link href="style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
@@ -19,19 +19,19 @@
                 </div>
                 <div class="navigationDiv">
                     <div class="tab">
-                        <div class="currentTabHeader">Main Features</div>
+                        <div class="tabHeader">Main Features</div>
                         <div class="subNavigationDiv">
-                            <a href="index.html" class="currentSubNavigationOverviewLink">Overview</a>
+                            <a href="index.html" class="subNavigationOverviewLink">Overview</a>
                             <a href="nolix_console_clients.html" class="subNavigationLink">Nolix console clients</a>
                             <a href="nolix_neuronal_nets.html" class="subNavigationLink">Nolix neuronal nets</a>
                         </div>
                     </div>
                     <div class="tab">
-                        <div class="tabHeader">Technical Features</div>
+                        <div class="currentTabHeader">Technical Features</div>
                         <div class="subNavigationDiv">
                             <a href="technical_features.html" class="subNavigationOverviewLink">Overview</a>
-                            <a href="nolix_containers.html" class="subNavigationLink">Nolix containers</a>
-                            <a href="nolix_sequencer.html" class="subNavigationLink">Nolix Sequencer</a>
+                            <a href="nolix_containers.html" class="currentSubNavigationLink">Nolix containers</a>
+                            <a href="nolix_sequencer.html" class="subNavigationLink">Nolix sequencer</a>
                             <a href="nolix_tests.html" class="subNavigationLink">Nolix tests</a>
                             <a href="nolix_validator.html" class="subNavigationLink">Nolix validator</a>
                         </div>
@@ -54,23 +54,46 @@
                 </div>
             </div>
         </div>
-        <div class="mainDiv">            
-            <div class="contentDiv">                
-                <div class="fillDiv"></div>
+        <div class="mainDiv">
+            <div class="contentDiv">
+                <h1>Nolix containers</h1>
                 <table>
                     <tr>
-                        <th>
-                            <a href="nolix_console_clients.html" class="link">Nolix&nbsp;console&nbsp;clients</a>
-                        </th>
-                        <td>Provides console applications as client-server-programs.</td>
+                        <th>Packages</th>
+                        <td>
+                            <div>
+                                <img src="Images/package_icon.png" class="icon">
+                                <a href="Javadoc/ch/nolix/core/container/package-summary.html" target="blank_" class="link">ch.nolix.core.container</a>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
-                        <th>
-                            <a href="nolix_neuronal_nets.html" class="link">Nolix&nbsp;neuronal&nbsp;nets</a>
-                        </th>
-                        <td>Provides the creation of artificial neuronal nets.</td>
+                        <th>Usability</th>
+                        <td>Provides containers with various search methods.</td>
                     </tr>
                 </table>
+                <br>
+                <h2>How to create a read container for an array</h2>
+                <p class="codeBlock">
+                    String[] namesArray ...<br>
+                    ReadContainer&lt;String&gt; names = new ReadContainer&lt;&gt;(namesArray);<br>
+                    String longestName = names.getRefMax(n -> n.length());
+                </p>
+                <h2>How to get a subset of a container</h2>
+                <p class="codeBlock">
+                    List&lt;Person&gt; persons ...<br>
+                    List&lt;Person&gt; seniors = persons.getRefSelected(p -> p.getAge() >= 65);
+                </p>
+                <h2>How to get a value from the elements of a container</h2>
+                <p class="codeBlock">
+                    List&lt;Person&gt; persons ...<br>
+                    List&lt;Person&gt; ages = persons.to(p -> p.getAge());
+                </p>
+                <h2>How to get an average from the elements of a container</h2>
+                <p class="codeBlock">
+                    List&lt;Person&gt; persons ...<br>
+                    double averageAge = persons.getAverageByInt(p -> p.getAge());
+                </p>
             </div>
             <div class="footerDiv">Copyright &copy; Silvan Wyss, 2018</div>
         </div>
