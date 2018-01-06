@@ -56,7 +56,7 @@
         </div>
         <div class="mainDiv">
             <div class="contentDiv">
-                <h1>Nolix sequencer<h1>
+                <h1>Nolix sequencer</h1>
                 <table>
                     <tr>
                         <th>Packages</th>
@@ -73,10 +73,10 @@
                     </tr>
                 </table>
                 <h2>How to run a method in background</h2>
-                <p class="codeBlock">Sequencer.runInBackground(() -> doCalculations());</p>
+                <p class="codeBlock">Sequencer.runInBackground(() -&gt; doCalculations());</p>
                 <h2>How to check if a background run is finished</h2>
                 <p class="codeBlock">
-                        Future future = Sequencer.runInBackground(() -> doCalculations());<br>
+                        Future future = Sequencer.runInBackground(() -&gt; doCalculations());<br>
                         ...<br>
                         if (future.isFinishedSuccessfully()) {<br>
                         ...
