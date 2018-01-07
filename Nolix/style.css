@@ -117,12 +117,9 @@ tr {
 }
 
 .footerDiv {
-    margin-top: 50px;
-    margin-bottom: 100px;
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-top-color: #A0A0A0;
-    color: #A0A0A0;
+    width: 100%;
+    height: 200px;
+    background-color: #A0A0A0;
 }
 
 .headerDiv {
@@ -175,7 +172,12 @@ tr {
     height: 300px;
 }
 
-.innerHeaderDiv {
+.innerFooterDiv {
+    padding: 20px;
+    color: white;
+}
+
+.innerFooterDiv, .innerHeaderDiv {
     margin: 0 auto;
     width: 1000px; 
 }
@@ -195,7 +197,7 @@ tr {
 }
 
 .mainDiv {
-    margin: 0 auto;
+    margin: 0px auto 200px;
     width: 1000px;
     padding-top: 115px;
 }
