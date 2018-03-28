@@ -3,7 +3,7 @@
     <head>
         <title>Nolix Java Library</title>
         <meta name="author" content="Silvan Wyss">
-        <meta name="keywords" content="console application, console client">
+        <meta name="keywords" content="logger, logging, log messages">
         <link href="style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
@@ -19,19 +19,19 @@
                 </div>
                 <div class="navigationDiv">
                     <div class="tab">
-                        <div class="currentTabHeader">Main Features</div>
+                        <div class="tabHeader">Main Features</div>
                         <div class="subNavigationDiv">
                             <a href="index.html" class="subNavigationOverviewLink">Overview</a>
-                            <a href="nolix_console_clients.html" class="currentSubNavigationLink">Nolix console clients</a>
+                            <a href="nolix_console_clients.html" class="subNavigationLink">Nolix console clients</a>
                             <a href="nolix_neuronal_nets.html" class="subNavigationLink">Nolix neuronal nets</a>
                         </div>
                     </div>
                     <div class="tab">
-                        <div class="tabHeader">Technical Features</div>
+                        <div class="currentTabHeader">Technical Features</div>
                         <div class="subNavigationDiv">
                             <a href="technical_features.html" class="subNavigationOverviewLink">Overview</a>
                             <a href="nolix_containers.html" class="subNavigationLink">Nolix containers</a>
-                            <a href="nolix_logger.html" class="subNavigationLink">Nolix logger</a>
+                            <a href="nolix_logger.html" class="currentSubNavigationLink">Nolix logger</a>
                             <a href="nolix_sequencer.html" class="subNavigationLink">Nolix sequencer</a>
                             <a href="nolix_tests.html" class="subNavigationLink">Nolix tests</a>
                             <a href="nolix_validator.html" class="subNavigationLink">Nolix validator</a>
@@ -57,54 +57,54 @@
         </div>
         <div class="mainDiv">
             <div class="contentDiv">
-                <h1>Nolix console clients</h1>
-                <div class="containerDiv">
-                    <img src="Images/grey_blue_console_design.png" alt="console client in grey blue design" class="image">
-                    <img src="Images/green_console_design.png" alt="console client in green design" class="image">
-                </div>             
+                <h1>Nolix logger</h1>
                 <table>
                     <tr>
                         <th>Packages</th>
                         <td>
                             <div>
                                 <img src="Images/package_icon.png" class="icon">
-                                <a href="Javadoc/ch/nolix/system/consoleClient/package-summary.html" target="blank_" class="link">ch.nolix.system.consoleClient</a>
+                                <a href="Javadoc/ch/nolix/primitive/logger/package-summary.html" target="blank_" class="link">ch.nolix.primitive.logger</a>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <th>Usability</th>
-                        <td>Provides console applications as client-server-programs.</td>
-                    </tr>
-                    <tr>
-                        <th>Tutorials</th>
-                        <td>
-                            <img src="Images/source_file_icon.png" class="icon">
-                            <a href="console_client_tutorial.html" target="_blank" class="link">Console client tutorial</a>
-                        </td>
+                        <td>Can log messages, warnings and errors.</td>
                     </tr>
                 </table>
-                <br>                     
-                <h2>How to create a server</h2>
-                <p class="codeBlock">Server server = new Server(50000);</p>
-                <h2>How to create a console client application</h2>
+                <br>
+                <h2>How to log a warning</h2>
                 <p class="codeBlock">
-                    StandardApplication&ltConsoleClient&gt application = new StandardApplication&lt&gt("Demo", MySession.class);<br>
-                    <br>
-                    server.addApplication(application);
+                    Logger.logWarning("There are many bananas.");
                 </p>
-                <h2>How to define a console client session class</h2>
+                <h2>How to log an error</h2>
                 <p class="codeBlock">
-                    public class MySession extends Session&ltConsoleClient&gt {<br>
-                    <br>
-                    &nbsp;&nbsp;public void initailize() {<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;getRefClient().writeLineToConsole("Welcome!");<br>
-                    &nbsp;&nbsp;}<br>
-                    }<br>
+                    Logger.logError("There are too many bananas.");
                 </p>
-                <h2>How to create a console front client</h2>
+                <h2>How to log a value</h2>
                 <p class="codeBlock">
-                    ConsoleFrontClient consoleClient = new ConsoleFrontClient("151.248.218.157", 50000, "Demo");
+                    int amount ...<br>
+                    Logger.logValue("amount", amount);
+                </p>
+                <h2>How to disable the Logger at all</h2>
+                <p class="codeBlock">
+                    Logger.disable();
+                </p>
+                <p>The logger will not log anything when it is disabled. The logger is enabled per default.</p>
+                </br>
+                <h2>About the logger</h2>
+                <p>
+                    The Nolix logger is a simple logger that is optimized for performance.
+                    When a log entry is created, it is added to a queue and the current thread can go on.
+                    The queue is processed in background, what means that the log entries are given to the log handlers.
+                </p>
+                </br>
+                <h2>What a log handler is</h2>
+                <p>
+                    A log handler gets all log entries from the logger.
+                    A logger can filter the log entries and display them or write them to a file.
+                    The logger contains one log handler per default, which prints out the log entries to the standard console.
                 </p>
             </div>
         </div>
