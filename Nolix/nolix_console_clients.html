@@ -81,20 +81,18 @@
                         <a href="console_client_tutorial.html" target="_blank" class="link">Console client tutorial</a>
                     </td>
                 </tr>
-            </table>
-            <br>                     
+            </table>                  
             <h2>How to create a server</h2>
-            <p class="codeBlock">Server server = new Server(50000);</p>
+            <p class="codeBlock">var server = new Server(50000);</p>
             <h2>How to create a console client application</h2>
             <p class="codeBlock">
-                StandardApplication&ltConsoleClient&gt application = new StandardApplication&lt&gt("Demo", MySession.class);<br>
+                var application = new StandardApplication&ltConsoleFrontClient&gt("Demo", MySession.class);<br>
                 <br>
                 server.addApplication(application);
             </p>
-            <h2>How to define a console client session class</h2>
+            <h2>How to define a session class for console back clients</h2>
             <p class="codeBlock">
-                public class MySession extends Session&ltConsoleClient&gt {<br>
-                <br>
+                public class MySession extends Session&ltConsoleBackClient&gt {<br>
                 &nbsp;&nbsp;public void initailize() {<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;getRefClient().writeLineToConsole("Welcome!");<br>
                 &nbsp;&nbsp;}<br>
@@ -102,7 +100,7 @@
             </p>
             <h2>How to create a console front client</h2>
             <p class="codeBlock">
-                ConsoleFrontClient consoleClient = new ConsoleFrontClient("151.248.218.157", 50000, "Demo");
+                var consoleFrontClient = new ConsoleFrontClient("200.200.200.200", 50000, "Demo");
             </p>
         </div>
         <div class="footerDiv">

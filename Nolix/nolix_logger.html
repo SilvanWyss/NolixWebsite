@@ -72,7 +72,11 @@
                         <td>Can log messages, values, warnings and errors.</td>
                     </tr>
                 </table>
-                <br>
+                <h2>How to log a value</h2>
+                <p class="codeBlock">
+                    int amount ...<br>
+                    Logger.logValue("amount", amount);
+                </p>
                 <h2>How to log a warning</h2>
                 <p class="codeBlock">
                     Logger.logWarning("There are many bananas.");
@@ -80,12 +84,7 @@
                 <h2>How to log an error</h2>
                 <p class="codeBlock">
                     Logger.logError("There are too many bananas.");
-                </p>
-                <h2>How to log a value</h2>
-                <p class="codeBlock">
-                    int amount ...<br>
-                    Logger.logValue("amount", amount);
-                </p>
+                </p>                
                 <h2>How to disable the Logger at all</h2>
                 <p class="codeBlock">
                     Logger.disable();

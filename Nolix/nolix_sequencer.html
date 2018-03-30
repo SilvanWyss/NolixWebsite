@@ -71,16 +71,17 @@
                     <td>Can run functions in background.</td>
                 </tr>
             </table>
-            <h2>How to run a method in background</h2>
+            <h2>How to run a function in background</h2>
             <p class="codeBlock">Sequencer.runInBackground(() -&gt; doCalculations());</p>
             <h2>How to check if a background run is finished</h2>
             <p class="codeBlock">
-                    Future future = Sequencer.runInBackground(() -&gt; doCalculations());<br>
-                    ...<br>
-                    if (future.isFinishedSuccessfully()) {<br>
-                    ...
+                var future = Sequencer.runInBackground(() -&gt; doCalculations());<br>
+                ...<br>
+                if (future.isFinishedSuccessfully()) {<br>
+                &nbsp;&nbsp;...<br>
+                }
             </p>
-            <h2>How to sleep for 500 milliseconds</h2>
+            <h2>How to wait for 500 milliseconds</h2>
             <p class="codeBlock">Sequencer.waitForMilliseocnds(500);</p>
         </div>
         <div class="footerDiv">
