@@ -69,6 +69,12 @@ tr {
     display: block;
 }
 
+.borderDiv {
+    border-style: solid;
+    border-width: 1px;
+    padding: 20px;
+}
+
 .button {
     display: block;
     margin-bottom: 20px;
