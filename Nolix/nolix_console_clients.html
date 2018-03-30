@@ -54,58 +54,56 @@
                 </div>
             </div>
         </div>
-        <div class="mainDiv">
-            <div class="contentDiv">
-                <h1>Nolix console clients</h1>
-                <div class="containerDiv">
-                    <img src="Images/grey_blue_console_design.png" alt="console client in grey blue design" class="image">
-                    <img src="Images/green_console_design.png" alt="console client in green design" class="image">
-                </div>             
-                <table>
-                    <tr>
-                        <th>Packages</th>
-                        <td>
-                            <div>
-                                <img src="Images/package_icon.png" class="icon">
-                                <a href="Javadoc/ch/nolix/system/consoleClient/package-summary.html" target="blank_" class="link">ch.nolix.system.consoleClient</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Usability</th>
-                        <td>Provides console applications as client-server-programs.</td>
-                    </tr>
-                    <tr>
-                        <th>Tutorials</th>
-                        <td>
-                            <img src="Images/source_file_icon.png" class="icon">
-                            <a href="console_client_tutorial.html" target="_blank" class="link">Console client tutorial</a>
-                        </td>
-                    </tr>
-                </table>
-                <br>                     
-                <h2>How to create a server</h2>
-                <p class="codeBlock">Server server = new Server(50000);</p>
-                <h2>How to create a console client application</h2>
-                <p class="codeBlock">
-                    StandardApplication&ltConsoleClient&gt application = new StandardApplication&lt&gt("Demo", MySession.class);<br>
-                    <br>
-                    server.addApplication(application);
-                </p>
-                <h2>How to define a console client session class</h2>
-                <p class="codeBlock">
-                    public class MySession extends Session&ltConsoleClient&gt {<br>
-                    <br>
-                    &nbsp;&nbsp;public void initailize() {<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;getRefClient().writeLineToConsole("Welcome!");<br>
-                    &nbsp;&nbsp;}<br>
-                    }<br>
-                </p>
-                <h2>How to create a console front client</h2>
-                <p class="codeBlock">
-                    ConsoleFrontClient consoleClient = new ConsoleFrontClient("151.248.218.157", 50000, "Demo");
-                </p>
-            </div>
+        <div class="contentDiv">
+            <h1>Nolix console clients</h1>
+            <div class="containerDiv">
+                <img src="Images/grey_blue_console_design.png" alt="console client in grey blue design" class="image">
+                <img src="Images/green_console_design.png" alt="console client in green design" class="image">
+            </div>             
+            <table>
+                <tr>
+                    <th>Packages</th>
+                    <td>
+                        <div>
+                            <img src="Images/package_icon.png" class="icon">
+                            <a href="Javadoc/ch/nolix/system/consoleClient/package-summary.html" target="blank_" class="link">ch.nolix.system.consoleClient</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Usability</th>
+                    <td>Provides console applications as client-server-programs.</td>
+                </tr>
+                <tr>
+                    <th>Tutorials</th>
+                    <td>
+                        <img src="Images/source_file_icon.png" class="icon">
+                        <a href="console_client_tutorial.html" target="_blank" class="link">Console client tutorial</a>
+                    </td>
+                </tr>
+            </table>
+            <br>                     
+            <h2>How to create a server</h2>
+            <p class="codeBlock">Server server = new Server(50000);</p>
+            <h2>How to create a console client application</h2>
+            <p class="codeBlock">
+                StandardApplication&ltConsoleClient&gt application = new StandardApplication&lt&gt("Demo", MySession.class);<br>
+                <br>
+                server.addApplication(application);
+            </p>
+            <h2>How to define a console client session class</h2>
+            <p class="codeBlock">
+                public class MySession extends Session&ltConsoleClient&gt {<br>
+                <br>
+                &nbsp;&nbsp;public void initailize() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;getRefClient().writeLineToConsole("Welcome!");<br>
+                &nbsp;&nbsp;}<br>
+                }<br>
+            </p>
+            <h2>How to create a console front client</h2>
+            <p class="codeBlock">
+                ConsoleFrontClient consoleClient = new ConsoleFrontClient("151.248.218.157", 50000, "Demo");
+            </p>
         </div>
         <div class="footerDiv">
             <div class="innerFooterDiv">Copyright &copy; Silvan Wyss, 2018</div>
