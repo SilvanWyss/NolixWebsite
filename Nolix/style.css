@@ -65,6 +65,10 @@ tr {
     vertical-align: top;
 }
 
+ul {
+    margin: 0px;
+}
+
 .blockLink {
     display: block;
 }
@@ -156,7 +160,8 @@ tr {
 }
 
 .icon {
-    width: 20px;
+    width: 50px;
+    filter: grayscale(100%);
 }
 
 .image {
