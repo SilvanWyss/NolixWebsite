@@ -80,7 +80,7 @@ ul {
     display: block;
     margin-bottom: 20px;
     width: 180px;
-    background-color: #000080;
+    background-color: #004080;
     padding: 5px;
     text-align: center;
 }
@@ -91,7 +91,7 @@ ul {
 
 .button:hover {
     transition: 200ms;
-    background-color: #0000E0;
+    background-color: #0080E0;
 }
 
 .codeBlock {
@@ -113,7 +113,7 @@ ul {
 
 .contentDiv {
     min-height: 500px;
-    padding-top: 140px;
+    padding-top: 180px;
     padding-bottom: 100px;
     overflow: hidden;
 }
@@ -130,17 +130,18 @@ ul {
 }
 
 .footerDiv {
-    width: 100%;
     height: 100px;
-    background-color: #A0A0A0;
+}
+
+.footerDiv, .headerDiv {
+    width: 100%;
+    background: linear-gradient(#400000, #100040);
+    opacity: 0.9;
 }
 
 .headerDiv {
     position: fixed;
     z-index: 1;
-    width: 100%;
-    background-color: #A0A0A0;
-    opacity: 0.9;
 }
 
 .headerLinkDiv {
@@ -148,7 +149,7 @@ ul {
 }
 
 .headerLinkDiv a {
-    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .headerSubTitle {
@@ -157,12 +158,11 @@ ul {
     font-family: Tahoma;
     font-size: 25px;
     font-style: italic;
-    color: #FFFFFF;
+    color: #E0E0E0;
 }
 
 .icon {
     width: 50px;
-    filter: grayscale(00%);
 }
 
 .image {
@@ -190,16 +190,19 @@ ul {
 
 .innerFooterDiv {
     padding: 20px;
-    color: #FFFFFF;
+    color: #E0E0E0;
+}
+
+.innerHeaderDiv {
+    padding-top: 10px;
 }
 
 .link, .blockLink {
-    color: #000080;
+    color: #004080;
 }
 
 .link:hover, .blockLink:hover {
     transition: 200ms;
-    color: #0000E0;
     text-decoration: underline;
 }
 
@@ -224,7 +227,7 @@ ul {
 .subNavigationDiv {
     display: none;
     position: fixed;
-    background-color: #A0A0A0;
+    background: linear-gradient(#100040, #400000);
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -236,12 +239,12 @@ ul {
     padding-top: 2px;
     padding-bottom: 2px;
     padding-left: 10px;
-    color: #FFFFFF;
+    color: #E0E0E0;
 }
 
 .subNavigationLink:hover, .currentSubNavigationLink:hover, .subNavigationOverviewLink:hover, .currentSubNavigationOverviewLink:hover {
     transition: 200ms;
-    background-color: #000000;
+    text-decoration: underline;
 }
 
 .subNavigationOverviewLink, .currentSubNavigationOverviewLink {
@@ -251,12 +254,14 @@ ul {
 .tab {
     float: left;
     overflow: hidden;
+    text-decoration-color: #E0E0E0;
 }
 
 .tab:hover {
     transition: 200ms;
     cursor: pointer;
-    background-color: #000000;
+    text-decoration: underline;
+    text-decoration-color: #E0E0E0;
 }
 
 .tab:hover .subNavigationDiv {
