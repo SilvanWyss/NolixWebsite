@@ -31,6 +31,11 @@
   <priority>0.50</priority>
 </url>
 <url>
+  <loc>http://nolix.ch/nolix_console_gui.html</loc>
+  <lastmod>2018-06-01</lastmod>
+  <priority>0.50</priority>
+</url>
+<url>
   <loc>http://nolix.ch/nolix_in_code_city.html</loc>
   <lastmod>2018-01-06</lastmod>
   <priority>0.10</priority>
