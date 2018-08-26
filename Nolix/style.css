@@ -134,7 +134,7 @@ ul {
 
 .footerDiv, .headerDiv {
     width: 100%;
-    background: linear-gradient(#400000, #100040);
+    background-color: #000010;
     opacity: 0.9;
 }
 
@@ -226,7 +226,7 @@ ul {
 .subNavigationDiv {
     display: none;
     position: fixed;
-    background: linear-gradient(#100040, #400000);
+    background-color: #000010;
     padding-top: 10px;
     padding-bottom: 10px;
 }
