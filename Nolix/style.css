@@ -138,6 +138,14 @@ ul {
     opacity: 0.9;
 }
 
+.frontText {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    color: #A0A0A0;
+}
+
 .headerDiv {
     position: fixed;
     z-index: 1;
