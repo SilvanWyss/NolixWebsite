@@ -231,7 +231,7 @@ ul {
     padding-bottom: 10px;
 }
 
-.subNavigationLink, .subNavigationOverviewLink, .currentSubNavigationLink, .currentSubNavigationOverviewLink  {
+.subNavigationLink, .subNavigationOverviewLink  {
     display: block;
     float: none;
     min-width: 220px;
@@ -241,12 +241,12 @@ ul {
     color: #E0E0E0;
 }
 
-.subNavigationLink:hover, .currentSubNavigationLink:hover, .subNavigationOverviewLink:hover, .currentSubNavigationOverviewLink:hover {
+.subNavigationLink:hover, .subNavigationOverviewLink:hover {
     transition: 200ms;
     text-decoration: underline;
 }
 
-.subNavigationOverviewLink, .currentSubNavigationOverviewLink {
+.subNavigationOverviewLink {
     margin-bottom: 20px;
 }
 
