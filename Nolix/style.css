@@ -53,7 +53,7 @@ td, th {
 
 th {
     width: 120px;
-    background-color: #A0A0A0;
+    background-color: #202030;
     color: #FFFFFF;
  }
 
@@ -80,7 +80,7 @@ ul {
     display: block;
     margin-bottom: 20px;
     width: 180px;
-    background-color: #004080;
+    background-color: #0080C0;
     padding: 5px;
     text-align: center;
 }
@@ -91,7 +91,7 @@ ul {
 
 .button:hover {
     transition: 200ms;
-    background-color: #0080E0;
+    background-color: #00A0E0;
 }
 
 .codeBlock {
@@ -143,7 +143,7 @@ ul {
     font-size: 30px;
     font-weight: bold;
     font-style: italic;
-    color: #A0A0A0;
+    color: #606060;
 }
 
 .headerDiv {
@@ -205,7 +205,7 @@ ul {
 }
 
 .link, .blockLink {
-    color: #004080;
+    color: #0080C0;
 }
 
 .link:hover, .blockLink:hover {
