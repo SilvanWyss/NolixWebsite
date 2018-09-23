@@ -93,11 +93,8 @@
             <h2>How to define a session for console clients</h2>
             <p class="codeBlock">
                 public class MySession extends Session&ltConsoleBackClient&gt {<br>
-                <br>
                 &nbsp;&nbsp;public void initailize() {<br>
-                <br>
                 &nbsp;&nbsp;&nbsp;&nbsp;writeLineToConsole("Welcome!");<br>
-                <br>
                 &nbsp;&nbsp;&nbsp;&nbsp;writeLineToConsole("Enter your name.");<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;var name = readLineFromConsole();<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;writeLineToConsole("Hi " + name + " .");<br>
@@ -111,9 +108,7 @@
             <h2>How to set the look of a console client</h2>
             <p class="codeBlock">
                     public class MySession extends Session&ltConsoleBackClient&gt {<br>
-                    <br>
                     &nbsp;&nbsp;public void initailize() {<br>
-                    <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;setLook(new BlackGreenFrontConsoleClientLook());<br>
                     &nbsp;&nbsp;}<br>
                     }<br>

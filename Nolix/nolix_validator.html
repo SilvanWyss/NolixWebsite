@@ -57,7 +57,7 @@
                         <p>Description</p>
                         <img src="Images/info_icon.png" class="icon">
                     </th>
-                    <td>Provides functions to validate arguments.</td>
+                    <td>Provides methods to validate arguments.</td>
                 </tr>
                 <tr>
                     <th>
@@ -68,6 +68,15 @@
                         <a href="Javadoc/ch/nolix/primitive/validator2/package-summary.html" target="blank_" class="link">ch.nolix.primitive.validator2</a>
                     </td>
                 </tr>
+                <tr>
+                    <th>
+                        <p>Documents</p>
+                        <img src="Images/pdf_icon.png" class="icon">
+                    </th>
+                    <td>
+                        <a href="Documents/nolix_error_handling.pdf" target="_blank" class="link">Nolix error handling</a>                     
+                    </td>
+                    </tr>
                 <tr>
                     <th>
                         <p>Tutorials</p>
@@ -81,23 +90,29 @@
             <h2>How to validate that a parameter is positive</h2>
             <p class="codeBlock">
                 public void addAmount(int amount) {<br>
+                <br>
                 &nbsp;&nbsp;Validator.suppose(amount).isPositive();<br>
+                <br>
                 &nbsp;&nbsp;...<br>
                 }
             </p>
             <h2>How to validate that a named parameter is positve</h2>
             <p class="codeBlock">
-                    public void addAmount(int amount) {<br>
-                    &nbsp;&nbsp;Validator.suppose(amount).thatIsNamed("amount").isPositive();<br>
-                    &nbsp;&nbsp;...<br>
-                    }
+                public void addAmount(int amount) {<br>
+                <br>
+                &nbsp;&nbsp;Validator.suppose(amount).thatIsNamed("amount").isPositive();<br>
+                <br>
+                &nbsp;&nbsp;...<br>
+                }
             </p>
             <h2>How to validate that several strings are not empty</h2>
             <p class="codeBlock">
-                    public void addAmount(String[] names) {<br>
-                    &nbsp;&nbsp;Validator.supposeTheStrings(names).areNotEmpty();<br>
-                    &nbsp;&nbsp;...<br>
-                    }
+                public void addAmount(String[] names) {<br>
+                <br>
+                &nbsp;&nbsp;Validator.supposeTheStrings(names).areNotEmpty();<br>
+                <br>
+                &nbsp;&nbsp;...<br>
+                }
             </p>
         </div>
         <div class="footerDiv">
