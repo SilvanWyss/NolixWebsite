@@ -1,6 +1,7 @@
 * {
     font-size: 20px;
     font-family: 'Calibri';
+    color: #202030;
 }
 
 a {
@@ -54,8 +55,11 @@ td, th {
 th {
     width: 120px;
     background-color: #202030;
+}
+
+th, th p {
     color: #FFFFFF;
- }
+}
 
 tr {
     text-align: left;
@@ -143,7 +147,6 @@ ul {
     font-size: 30px;
     font-weight: bold;
     font-style: italic;
-    color: #606060;
 }
 
 .headerDiv {
