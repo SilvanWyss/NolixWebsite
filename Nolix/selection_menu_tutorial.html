@@ -17,77 +17,78 @@
         </div>
 		<div class="contentDiv">
             <h1>Selection menu tutorial</h1>
+            <h2>Source code</h2>
+            <div class="borderDiv">
 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008000">//package declaration</span>
-    <span style="color: #0000ff">package</span> ch.nolix.elementTutorial.GUITutorial;
+                <pre style='color:#000000;background:#ffffff;'><span style='color:#3f7f59; '>//package declaration</span>
+                    <span style='color:#7f0055; font-weight:bold; '>package</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>elementTutorial</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>GUITutorial</span><span style='color:#7f0055; '>;</span>
+                    
+                    <span style='color:#3f7f59; '>//own imports</span>
+                    <span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>element</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>GUI</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>Frame</span><span style='color:#7f0055; '>;</span>
+                    <span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>element</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>GUI</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>SelectionMenu</span><span style='color:#7f0055; '>;</span>
+                    <span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>element</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>color</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>Color</span><span style='color:#7f0055; '>;</span>
+                    
+                    <span style='color:#3f7f59; '>//class</span>
+                    <span style='color:#3f5fbf; '>/**</span>
+                    <span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> The {</span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span style='color:#3f5fbf; '>link SelectionMenuTutorial} is a tutorial for a {</span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span style='color:#3f5fbf; '>link SelectionMenu}.</span>
+                    <span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> Of the {</span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span style='color:#3f5fbf; '>link SelectionMenuTutorial} no instance can be created.</span>
+                    <span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span>
+                    <span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@author</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>Silvan Wyss</span><span style='color:#3f5fbf; '></span>
+                    <span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span style='color:#3f5fbf; '>month </span><span style='color:#3f5fbf; '>2018</span><span style='color:#7f9fbf; font-weight:bold; '>-</span><span style='color:#3f5fbf; '>05</span><span style='color:#3f5fbf; '></span>
+                    <span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span style='color:#3f5fbf; '>lines </span><span style='color:#3f5fbf; '>60</span><span style='color:#3f5fbf; '></span>
+                    <span style='color:#3f5fbf; '>&#xa0;*/</span>
+                    <span style='color:#7f0055; font-weight:bold; '>public</span> <span style='color:#7f0055; font-weight:bold; '>final</span> <span style='color:#7f0055; font-weight:bold; '>class</span> SelectionMenuTutorial {
+                    
+                        <span style='color:#3f7f59; '>//main method</span>
+                        <span style='color:#3f5fbf; '>/**</span>
+                    <span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> Creates a {</span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span style='color:#3f5fbf; '>link SelectionMenu} and adds it to a {</span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span style='color:#3f5fbf; '>link Frame}.</span>
+                    <span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span>
+                    <span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@param</span><span style='color:#3f5fbf; '> args</span>
+                    <span style='color:#3f5fbf; '>	 */</span>
+                        @SuppressWarnings(<span style='color:#2a00ff; '>"resource"</span>)
+                        <span style='color:#7f0055; font-weight:bold; '>public</span> <span style='color:#7f0055; font-weight:bold; '>static</span> <span style='color:#7f0055; font-weight:bold; '>void</span> main(<span style='color:#7f0055; font-weight:bold; '>String</span>[] args) {
+                            
+                            <span style='color:#3f7f59; '>//Creates a selection menu.</span>
+                            <span style='color:#7f0055; font-weight:bold; '>final</span> var selectionMenu =
+                            <span style='color:#7f0055; font-weight:bold; '>new</span> SelectionMenu(
+                                <span style='color:#2a00ff; '>"Gottfried Wilhelm Leibniz"</span>,
+                                <span style='color:#2a00ff; '>"Immanuel Kant"</span>,
+                                <span style='color:#2a00ff; '>"Johann Gottlieb Fichte"</span>,
+                                <span style='color:#2a00ff; '>"Georg Wilehlm Friedrich Hegel"</span>,
+                                <span style='color:#2a00ff; '>"Arthur Schopenhauer"</span>,
+                                <span style='color:#2a00ff; '>"Johann Gottfried Herder"</span>,
+                                <span style='color:#2a00ff; '>"Karl Marx"</span>,
+                                <span style='color:#2a00ff; '>"Friedrich Nietzsche"</span>,
+                                <span style='color:#2a00ff; '>"Ludwig Wittgenstein"</span>,
+                                <span style='color:#2a00ff; '>"Theodor W. Adorno"</span>,
+                                <span style='color:#2a00ff; '>"J�rgen Habermas"</span>,
+                                <span style='color:#2a00ff; '>"Richard David Precht"</span>
+                            );
+                            
+                            <span style='color:#3f7f59; '>//Configures the look of the selection menu.</span>
+                                selectionMenu.setMaxHeight(200);
+                                
+                                selectionMenu
+                                .getRefBaseLook()
+                                .setBackgroundColor(<span style='color:#7f0055; font-weight:bold; '>Color</span>.ALICE_BLUE)
+                                .setBorderThicknesses(5)
+                                .setBorderColors(<span style='color:#7f0055; font-weight:bold; '>Color</span>.DARK_BLUE)			
+                                .setItemPadding(5);
+                            
+                            <span style='color:#3f7f59; '>//Creates a frame and adds the selection menu to it.</span>
+                            <span style='color:#7f0055; font-weight:bold; '>new</span> Frame(<span style='color:#2a00ff; '>"Selection Menu Tutorial"</span>)
+                            .setRootWidget(selectionMenu);
+                        }
+                        
+                        <span style='color:#3f7f59; '>//private constructor</span>
+                        <span style='color:#3f5fbf; '>/**</span>
+                    <span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> Avoids that an instance of the {</span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span style='color:#3f5fbf; '>link SelectionMenuTutorial} can be created.</span>
+                    <span style='color:#3f5fbf; '>	 */</span>
+                        <span style='color:#7f0055; font-weight:bold; '>private</span> SelectionMenuTutorial() {}
+                    }
+                    </pre>
 
-    <span style="color: #008000">//own imports</span>
-    <span style="color: #0000ff">import</span> ch.nolix.element.GUI.Frame;
-    <span style="color: #0000ff">import</span> ch.nolix.element.GUI.SelectionMenu;
-    <span style="color: #0000ff">import</span> ch.nolix.element.color.Color;
-    
-    <span style="color: #008000">//class</span>
-    <span style="color: #008000">/**</span>
-    <span style="color: #008000"> * The {@link SelectionMenuTutorial} provides a tutorial for a {@link SelectionMenu}.</span>
-    <span style="color: #008000"> * Of the {@link SelectionMenuTutorial} no instance can be created.</span>
-    <span style="color: #008000"> * </span>
-    <span style="color: #008000"> * @author Silvan Wyss</span>
-    <span style="color: #008000"> * @month 2018-05</span>
-    <span style="color: #008000"> * @lines 60</span>
-    <span style="color: #008000"> */</span>
-    <span style="color: #0000ff">public</span> <span style="color: #0000ff">final</span> <span style="color: #0000ff">class</span> <span style="color: #2b91af">SelectionMenuTutorial</span> {
-    
-        <span style="color: #008000">//main method</span>
-        <span style="color: #008000">/**</span>
-    <span style="color: #008000">	 * Creates a {@link Frame} with a {@link SelectionMenu}.</span>
-    <span style="color: #008000">	 * </span>
-    <span style="color: #008000">	 * @param args</span>
-    <span style="color: #008000">	 */</span>
-        @SuppressWarnings(<span style="color: #a31515">&quot;resource&quot;</span>)
-        <span style="color: #0000ff">public</span> <span style="color: #0000ff">static</span> <span style="color: #2b91af">void</span> main(String[] args) {
-            
-            <span style="color: #008000">//Creates a selection menu.</span>
-            <span style="color: #0000ff">final</span> var selectionMenu = <span style="color: #0000ff">new</span> SelectionMenu()
-            .addItem(
-                <span style="color: #a31515">&quot;Gottfried Wilhelm Leibniz&quot;</span>,
-                <span style="color: #a31515">&quot;Immanuel Kant&quot;</span>,
-                <span style="color: #a31515">&quot;Johann Gottlieb Fichte&quot;</span>,
-                <span style="color: #a31515">&quot;Georg Wilehlm Friedrich Hegel&quot;</span>,
-                <span style="color: #a31515">&quot;Arthur Schopenhauer&quot;</span>,
-                <span style="color: #a31515">&quot;Johann Gottfried Herder&quot;</span>,
-                <span style="color: #a31515">&quot;Karl Marx&quot;</span>,
-                <span style="color: #a31515">&quot;Friedrich Nietzsche&quot;</span>,
-                <span style="color: #a31515">&quot;Ludwig Wittgenstein&quot;</span>,
-                <span style="color: #a31515">&quot;Theodor W. Adorno&quot;</span>,
-                <span style="color: #a31515">&quot;Jürgen Habermas&quot;</span>,
-                <span style="color: #a31515">&quot;Richard David Precht&quot;</span>
-            );
-            
-            <span style="color: #008000">//Configures the look of the selection menu.</span>
-                selectionMenu.setMaxHeight(200);
-            
-                selectionMenu
-                .getRefBaseLook()
-                .setBorderThicknesses(5)
-                .setBorderColors(Color.DARK_BLUE)
-                .setBackgroundColor(Color.ALICE_BLUE)
-                .setItemPadding(5);
-            
-            <span style="color: #008000">//Creates a frame with the selection menu.</span>
-            <span style="color: #0000ff">new</span> Frame()
-            .setTitle(<span style="color: #a31515">&quot;Selection Menu Tutorial&quot;</span>)
-            .setRootWidget(selectionMenu);
-        }
-        
-        <span style="color: #008000">//private constructor</span>
-        <span style="color: #008000">/**</span>
-    <span style="color: #008000">	 * Avoids that an instance of the {@link SelectionMenuTutorial} can be created.</span>
-    <span style="color: #008000">	 */</span>
-        <span style="color: #0000ff">private</span> SelectionMenuTutorial() {}
-    }
-    </pre></div>
-
-            <br>
+            </div>
             <h2>Output</h2>
             <img src="Images/selection_menu_tutorial.png" class="contentImage">
 		</div>
