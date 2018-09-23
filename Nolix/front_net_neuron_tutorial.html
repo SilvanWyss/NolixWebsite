@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nolix Java Library</title>
+		<meta name="author" content="Silvan Wyss">
+        <meta name="keywords" content="net neuron, tutorial">
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="headerDiv">
+            <div class="innerHeaderDiv">
+                <div class="titleDiv">
+                    <img src="Images/nolix_logo.png" alt="Nolix logo" class="logoImage">
+                    <p class="headerSubTitle">a Java library for business and science</p>
+                </div>
+            </div>
+        </div>		
+		<div class="contentDiv">
+			<h1>Front net neuron tutorial</h1>
+			<div class="borderDiv">
+
+				<pre style='color:#000000;background:#ffffff;'><span style='color:#3f7f59; '>//package declaration</span>
+					<span style='color:#7f0055; font-weight:bold; '>package</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>systemTutorial</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>netNeuronTutorial</span><span style='color:#7f0055; '>;</span>
+					
+					<span style='color:#3f7f59; '>//own imports</span>
+					<span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>core</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>specification</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>StandardSpecification</span><span style='color:#7f0055; '>;</span>
+					<span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>system</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>netNeuron</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>FrontNetNeuron</span><span style='color:#7f0055; '>;</span>
+					<span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>system</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>neuronoid</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>SourceNeuron</span><span style='color:#7f0055; '>;</span>
+					<span style='color:#7f0055; font-weight:bold; '>import</span><span style='color:#7f0055; '> ch</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>nolix</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>system</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>netNeuron</span><span style='color:#7f0055; '>.</span><span style='color:#7f0055; '>BackNetNeuron</span><span style='color:#7f0055; '>;</span>
+					
+					<span style='color:#3f7f59; '>//class</span>
+					<span style='color:#3f5fbf; '>/**</span>
+					<span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> The {</span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span style='color:#3f5fbf; '>link FrontNetNeuronTutorial} is a tutorial for {FrontNetNeuron}.</span>
+					<span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span>
+					<span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@author</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>Silvan Wyss</span><span style='color:#3f5fbf; '></span>
+					<span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span style='color:#3f5fbf; '>month </span><span style='color:#3f5fbf; '>2017</span><span style='color:#7f9fbf; font-weight:bold; '>-</span><span style='color:#3f5fbf; '>01</span><span style='color:#3f5fbf; '></span>
+					<span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span style='color:#3f5fbf; '>lines </span><span style='color:#3f5fbf; '>60</span><span style='color:#3f5fbf; '></span>
+					<span style='color:#3f5fbf; '>*/</span>
+					<span style='color:#7f0055; font-weight:bold; '>public</span> <span style='color:#7f0055; font-weight:bold; '>final</span> <span style='color:#7f0055; font-weight:bold; '>class</span> FrontNetNeuronTutorial {
+					
+						<span style='color:#3f7f59; '>//main method</span>
+						<span style='color:#3f5fbf; '>/**</span>
+					<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>1</span><span style='color:#3f5fbf; '>. Creates a back net neuron and adds an input neuron to it.</span>
+					<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>3</span><span style='color:#3f5fbf; '>. Creates front net neurons that will connect to the back net neuron.</span>
+					<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>4</span><span style='color:#3f5fbf; '>. Fires the back net neuron.</span>
+					<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>5</span><span style='color:#3f5fbf; '>. Prints out the outputs of the front net neurons to the console.</span>
+					<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#3f5fbf; '>6</span><span style='color:#3f5fbf; '>. Closes the back net neuron and the front net neurons.</span>
+					<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span>
+					<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@param</span><span style='color:#3f5fbf; '> arguments</span>
+					<span style='color:#3f5fbf; '>	 */</span>
+						<span style='color:#7f0055; font-weight:bold; '>public</span> <span style='color:#7f0055; font-weight:bold; '>static</span> <span style='color:#7f0055; font-weight:bold; '>final</span> <span style='color:#7f0055; font-weight:bold; '>void</span> main(<span style='color:#7f0055; font-weight:bold; '>String</span>[] arguments) {
+							
+							<span style='color:#3f7f59; '>//Defines the port for the back net neuron.</span>
+							<span style='color:#7f0055; font-weight:bold; '>final</span> var port = 20000;
+							
+							<span style='color:#3f7f59; '>//Creates a back net neuron.</span>
+							<span style='color:#7f0055; font-weight:bold; '>final</span> var netBackNeuron =
+							<span style='color:#7f0055; font-weight:bold; '>new</span> BackNetNeuron&lt;<span style='color:#7f0055; font-weight:bold; '>String</span>>(port, s -> <span style='color:#7f0055; font-weight:bold; '>new</span> StandardSpecification(s));
+							
+							<span style='color:#3f7f59; '>//Creates and adds an input neuron to the back net neuron.</span>
+							netBackNeuron.addInputNeuron(<span style='color:#7f0055; font-weight:bold; '>new</span> SourceNeuron&lt;<span style='color:#7f0055; font-weight:bold; '>String</span>>(<span style='color:#2a00ff; '>"Hello_World!"</span>));
+							
+							<span style='color:#3f7f59; '>//Creates front net neurons that will connect to the back net neuron.</span>
+							<span style='color:#7f0055; font-weight:bold; '>final</span> var frontNetNeuron1 = <span style='color:#7f0055; font-weight:bold; '>new</span> FrontNetNeuron&lt;<span style='color:#7f0055; font-weight:bold; '>String</span>>(port, s -> s.toString());
+							<span style='color:#7f0055; font-weight:bold; '>final</span> var frontNetNeuron2 = <span style='color:#7f0055; font-weight:bold; '>new</span> FrontNetNeuron&lt;<span style='color:#7f0055; font-weight:bold; '>String</span>>(port, s -> s.toString());
+							
+							<span style='color:#3f7f59; '>//Fires the back net neuron.</span>
+							netBackNeuron.fire();
+							
+							<span style='color:#3f7f59; '>//Prints out the output of the front net neurons to the console.</span>
+							<span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(<span style='color:#2a00ff; '>"front net neuron 1 output: "</span> + frontNetNeuron1.getRefOutput());
+							<span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(<span style='color:#2a00ff; '>"front net neuron 2 output: "</span> + frontNetNeuron2.getRefOutput());
+							
+							<span style='color:#3f7f59; '>//Closes the back net neuron and the fron net neurons.</span>
+							netBackNeuron.close();
+							frontNetNeuron1.close();
+							frontNetNeuron2.close();
+						}
+						
+						<span style='color:#3f7f59; '>//private constructor</span>
+						<span style='color:#3f5fbf; '>/**</span>
+					<span style='color:#3f5fbf; '>	 </span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span style='color:#3f5fbf; '> Avoids that an instance of the {</span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span style='color:#3f5fbf; '>link FrontNetNeuronTutorial} can be created.</span>
+					<span style='color:#3f5fbf; '>	 */</span>
+						<span style='color:#7f0055; font-weight:bold; '>private</span> FrontNetNeuronTutorial() {}
+					}
+					</pre>
+
+            </div>
+		</div>
+		<div class="footerDiv">
+			<div class="innerFooterDiv">Copyright &copy; Silvan Wyss, 2018</div>
+		</div>
+    </body>
+</html>
