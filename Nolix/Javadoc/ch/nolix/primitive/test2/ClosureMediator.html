@@ -143,21 +143,21 @@ extends <a href="../../../../ch/nolix/primitive/test2/Mediator.html" title="clas
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ch/nolix/primitive/test2/ClosureMediator.html#throwsException--">throwsException</a></span>()</code>
 <div class="block">Generates an error if:
- -The closure of this closure mediator is not an instance.</div>
+ -The closure of this closure mediator is null.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ch/nolix/primitive/test2/ClosureMediator.html#throwsExceptionOfType-java.lang.Class-">throwsExceptionOfType</a></span>(java.lang.Class&lt;?&gt;&nbsp;type)</code>
 <div class="block">Generates an error if:
- -The closure of this closure mediator is not an instance.</div>
+ -The closure of this closure mediator is null.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ch/nolix/primitive/test2/ClosureMediator.html#throwsNoException--">throwsNoException</a></span>()</code>
 <div class="block">Generates an error if:
- -The closure of this closure mediator is not an instance.</div>
+ -The closure of this closure mediator is null.</div>
 </td>
 </tr>
 </table>
@@ -197,7 +197,7 @@ extends <a href="../../../../ch/nolix/primitive/test2/Mediator.html" title="clas
 <h4>throwsException</h4>
 <pre>public&nbsp;void&nbsp;throwsException()</pre>
 <div class="block">Generates an error if:
- -The closure of this closure mediator is not an instance.
+ -The closure of this closure mediator is null.
  -The closure of this closure mediator throws no exception by running 1 time.</div>
 </li>
 </ul>
@@ -209,14 +209,14 @@ extends <a href="../../../../ch/nolix/primitive/test2/Mediator.html" title="clas
 <h4>throwsExceptionOfType</h4>
 <pre>public&nbsp;void&nbsp;throwsExceptionOfType(java.lang.Class&lt;?&gt;&nbsp;type)</pre>
 <div class="block">Generates an error if:
- -The closure of this closure mediator is not an instance.
+ -The closure of this closure mediator is null.
  -The closure of this closure mediator throws no exception
   whose type is of the given type or is a sub type of the given type.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>type</code> - </dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../ch/nolix/primitive/invalidArgumentException/NullArgumentException.html" title="class in ch.nolix.primitive.invalidArgumentException">NullArgumentException</a></code> - if the given type is not an instance.</dd>
+<dd><code><a href="../../../../ch/nolix/primitive/invalidArgumentException/NullArgumentException.html" title="class in ch.nolix.primitive.invalidArgumentException">NullArgumentException</a></code> - if the given type is null.</dd>
 </dl>
 </li>
 </ul>
@@ -228,7 +228,7 @@ extends <a href="../../../../ch/nolix/primitive/test2/Mediator.html" title="clas
 <h4>throwsNoException</h4>
 <pre>public&nbsp;void&nbsp;throwsNoException()</pre>
 <div class="block">Generates an error if:
- -The closure of this closure mediator is not an instance.
+ -The closure of this closure mediator is null.
  -The closure of this closure mediator throws an exception by running 1 time.</div>
 </li>
 </ul>
