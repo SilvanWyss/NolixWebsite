@@ -54,11 +54,7 @@ td, th {
 
 th {
     width: 120px;
-    background-color: #202030;
-}
-
-th, th p {
-    color: #FFFFFF;
+    background-color: #E0E0E0;
 }
 
 tr {
@@ -84,7 +80,7 @@ ul {
     display: block;
     margin-bottom: 20px;
     width: 180px;
-    background-color: #C000C0;
+    background-color: #0000A0;
     padding: 5px;
     text-align: center;
 }
@@ -95,7 +91,7 @@ ul {
 
 .button:hover {
     transition: 200ms;
-    background-color: #F000F0;
+    background-color: #0000F0;
 }
 
 .codeBlock {
@@ -140,13 +136,6 @@ ul {
     width: 100%;
     background-color: #000010;
     opacity: 0.9;
-}
-
-.frontText {
-    margin-bottom: 20px;
-    font-size: 30px;
-    font-weight: bold;
-    font-style: italic;
 }
 
 .headerDiv {
@@ -208,7 +197,7 @@ ul {
 }
 
 .link, .blockLink {
-    color: #C000C0;
+    color: #0000E0;
 }
 
 .link:hover, .blockLink:hover {
