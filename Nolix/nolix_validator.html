@@ -31,10 +31,10 @@
                         <div class="subNavigationDiv">
                             <a href="technical_features.html" class="subNavigationOverviewLink">Overview</a>
                             <a href="nolix_containers.html" class="subNavigationLink">Nolix containers</a>
-                            <a href="nolix_logger.html" class="subNavigationLink">Nolix logger</a>
-                            <a href="nolix_sequencer.html" class="subNavigationLink">Nolix sequencer</a>
+                            <a href="nolix_logger.html" class="subNavigationLink">Nolix Logger</a>
+                            <a href="nolix_sequencer.html" class="subNavigationLink">Nolix Sequencer</a>
                             <a href="nolix_tests.html" class="subNavigationLink">Nolix tests</a>
-                            <a href="nolix_validator.html" class="subNavigationLink">Nolix validator</a>
+                            <a href="nolix_validator.html" class="subNavigationLink">Nolix Validator</a>
                         </div>
                     </div>
                     <div class="tab">
@@ -49,14 +49,14 @@
             </div>
         </div>
         <div class="contentDiv">
-            <h1>Nolix validator</h1>
+            <h1>Nolix Validator</h1>
             <table>
                 <tr>
                     <th>
                         <p>Description</p>
                         <img src="Images/info_icon.png" class="icon">
                     </th>
-                    <td>Provides methods to validate arguments.</td>
+                    <td>Provides a Validator that can validate arguments.</td>
                 </tr>
                 <tr>
                     <th>
@@ -74,8 +74,8 @@
                     </th>
                     <td>
                         <ul>
-                        <li><a href="Documents/nolix validator.pdf" target="_blank" class="link">Nolix validator</a></li>
-                        <li><a href="Documents/nolix exceptions.pdf" target="_blank" class="link">Nolix exceptions</a></li>
+                        <li><a href="Documents/nolix validator.pdf" target="_blank" class="link">Nolix Validator</a></li>
+                        <li><a href="Documents/nolix exceptions.pdf" target="_blank" class="link">Nolix Exceptions</a></li>
                         </ul>         
                     </td>
                     </tr>
@@ -89,30 +89,26 @@
                     </td>
                 </tr>
             </table>
-            <h2>How to validate that a parameter is positive</h2>
+            <br>
+            <br>
+            <h2>How to validate that an argument is positive</h2>
             <p class="codeBlock">
                 public void addAmount(int amount) {<br>
-                <br>
                 &nbsp;&nbsp;Validator.suppose(amount).isPositive();<br>
-                <br>
                 &nbsp;&nbsp;...<br>
                 }
             </p>
-            <h2>How to validate that a named parameter is positve</h2>
+            <h2>How to include the argument's name in the error message</h2>
             <p class="codeBlock">
                 public void addAmount(int amount) {<br>
-                <br>
                 &nbsp;&nbsp;Validator.suppose(amount).thatIsNamed("amount").isPositive();<br>
-                <br>
                 &nbsp;&nbsp;...<br>
                 }
             </p>
             <h2>How to validate that several strings are not empty</h2>
             <p class="codeBlock">
                 public void addAmount(String[] names) {<br>
-                <br>
                 &nbsp;&nbsp;Validator.supposeTheStrings(names).areNotEmpty();<br>
-                <br>
                 &nbsp;&nbsp;...<br>
                 }
             </p>

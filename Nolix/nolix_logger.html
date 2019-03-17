@@ -3,7 +3,7 @@
     <head>
         <title>Nolix Java Library</title>
         <meta name="author" content="Silvan Wyss">
-        <meta name="keywords" content="logger, logging, log messages">
+        <meta name="keywords" content="Logger, logging, log messages">
         <link href="style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
@@ -31,10 +31,10 @@
                         <div class="subNavigationDiv">
                             <a href="technical_features.html" class="subNavigationOverviewLink">Overview</a>
                             <a href="nolix_containers.html" class="subNavigationLink">Nolix containers</a>
-                            <a href="nolix_logger.html" class="subNavigationLink">Nolix logger</a>
-                            <a href="nolix_sequencer.html" class="subNavigationLink">Nolix sequencer</a>
+                            <a href="nolix_Logger.html" class="subNavigationLink">Nolix Logger</a>
+                            <a href="nolix_sequencer.html" class="subNavigationLink">Nolix Sequencer</a>
                             <a href="nolix_tests.html" class="subNavigationLink">Nolix tests</a>
-                            <a href="nolix_validator.html" class="subNavigationLink">Nolix validator</a>
+                            <a href="nolix_validator.html" class="subNavigationLink">Nolix Validator</a>
                         </div>
                     </div>
                     <div class="tab">
@@ -50,14 +50,14 @@
         </div>
         <div class="mainDiv">
             <div class="contentDiv">
-                <h1>Nolix logger</h1>
+                <h1>Nolix Logger</h1>
                 <table>
                     <tr>
                         <th>
                             <p>Description</p>
                             <img src="Images/info_icon.png" class="icon">
                         </th>
-                        <td>Can log messages, values, warnings and errors.</td>
+                        <td>Provides a Logger that can log messages, values, warnings and errors.</td>
                     </tr>
                     <tr>
                         <th>
@@ -65,13 +65,16 @@
                             <img src="Images/package_icon.png" class="icon">
                         </th>
                         <td>
-                            <a href="Javadoc/ch/nolix/core/logger/package-summary.html" target="blank_" class="link">ch.nolix.core.logger</a>
+                            <a href="Javadoc/ch/nolix/core/Logger/package-summary.html" target="blank_" class="link">ch.nolix.core.Logger</a>
                         </td>
                     </tr>
                 </table>
+                <br>
+                <br>
                 <h2>How to log a value</h2>
                 <p class="codeBlock">
-                    int amount ...<br>
+                    int amount;<br>
+                    ...<br>
                     Logger.logValue("amount", amount);
                 </p>
                 <h2>How to log a warning</h2>
@@ -82,24 +85,24 @@
                 <p class="codeBlock">
                     Logger.logError("There are too many bananas.");
                 </p>                
-                <h2>How to disable the Logger at all</h2>
+                <h2>How to enable the Logger at all</h2>
                 <p class="codeBlock">
-                    Logger.disable();
+                    Logger.enable();
                 </p>
-                <p>The logger will not log anything when it is disabled. The logger is enabled per default.</p>
+                <p>The Logger will not log anything when it is disabled. The Logger is disabled per default.</p>
                 <br>
-                <h2>About the logger</h2>
+                <h2>About the Logger</h2>
                 <p>
-                    The Nolix logger is a simple logger that is optimized for performance.
+                    The Nolix Logger is a simple Logger that is optimized for performance.
                     When a log entry is created, it is added to a queue and the current thread can go on.
                     The queue is processed in background, where the log entries are given to the log handlers.
                 </p>
                 <br>
-                <h2>What a log handler is</h2>
+                <h2>What a LogHandler is</h2>
                 <p>
-                    A log handler gets all log entries from the logger.
-                    A logger can filter the log entries and display them or write them to a file.
-                    At start, the logger contains one default log handler, that prints out the log entries to the standard console.
+                    A LogHandler gets all log entries from the Logger.
+                    A Logger can filter the log entries and display them or write them to a file.
+                    At start, the Logger contains one default log handler, that prints out the log entries to the standard console.
                 </p>
             </div>
         </div>

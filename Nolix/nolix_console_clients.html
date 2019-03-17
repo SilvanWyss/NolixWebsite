@@ -31,10 +31,10 @@
                         <div class="subNavigationDiv">
                             <a href="technical_features.html" class="subNavigationOverviewLink">Overview</a>
                             <a href="nolix_containers.html" class="subNavigationLink">Nolix containers</a>
-                            <a href="nolix_logger.html" class="subNavigationLink">Nolix logger</a>
-                            <a href="nolix_sequencer.html" class="subNavigationLink">Nolix sequencer</a>
+                            <a href="nolix_logger.html" class="subNavigationLink">Nolix Logger</a>
+                            <a href="nolix_sequencer.html" class="subNavigationLink">Nolix Sequencer</a>
                             <a href="nolix_tests.html" class="subNavigationLink">Nolix tests</a>
-                            <a href="nolix_validator.html" class="subNavigationLink">Nolix validator</a>
+                            <a href="nolix_validator.html" class="subNavigationLink">Nolix Validator</a>
                         </div>
                     </div>
                     <div class="tab">
@@ -80,16 +80,18 @@
             <div class="containerDiv">
                 <img src="Images/grey_blue_console_design.png" alt="console client in grey blue design" class="image">
                 <img src="Images/green_console_design.png" alt="console client in green design" class="image">
-            </div>                 
-            <h2>How to create a server</h2>
-            <p class="codeBlock">var server = new Server(50000);</p>
-            <h2>How to create a console application</h2>
+            </div>
+            <br>
+            <br>                
+            <h2>How to create a Server</h2>
+            <p class="codeBlock">Server server = new Server(50000);</p>
+            <h2>How to create an Application for ConsoleFrontClients</h2>
             <p class="codeBlock">
-                var application = new StandardApplication&ltConsoleFrontClient&gt("Demo", MySession.class);<br>
+                StandardApplication&ltConsoleFrontClient&gt application = new StandardApplication&ltConsoleFrontClient&gt("Demo", MySession.class);<br>
                 <br>
                 server.addApplication(application);
             </p>
-            <h2>How to define a session for console clients</h2>
+            <h2>How to define a Session for ConsoleFrontClients</h2>
             <p class="codeBlock">
                 public class MySession extends Session&ltConsoleBackClient&gt {<br>
                 &nbsp;&nbsp;public void initailize() {<br>
@@ -100,11 +102,11 @@
                 &nbsp;&nbsp;}<br>
                 }<br>
             </p>
-            <h2>How to create a front console client</h2>
+            <h2>How to create a FrontConsoleClient</h2>
             <p class="codeBlock">
-                var consoleFrontClient = new ConsoleFrontClient("200.200.200.200", 50000, "Demo");
+                ConsoleFrontClient consoleFrontClient = new ConsoleFrontClient("200.200.200.200", 50000, "Demo");
             </p>
-            <h2>How to set the look of a console client</h2>
+            <h2>How to set the look of a ConsoleFrontClient</h2>
             <p class="codeBlock">
                     public class MySession extends Session&ltConsoleBackClient&gt {<br>
                     &nbsp;&nbsp;public void initailize() {<br>
