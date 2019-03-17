@@ -3,7 +3,7 @@
     <head>
         <title>Nolix Java Library</title>
         <meta name="author" content="Silvan Wyss">
-        <meta name="keywords" content="program flow, multithreading">
+        <meta name="keywords" content="fracal, fractal painting, fractal generation, Mandelbrot">
         <link href="style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
@@ -50,14 +50,14 @@
             </div>
         </div>
         <div class="contentDiv">
-            <h1>Nolix Sequencer</h1>
+            <h1>Nolix fractals</h1>
             <table>
                 <tr>
                     <th>
                         <p>Description</p>
                         <img src="Images/info_icon.png" class="icon">
                     </th>
-                    <td>Provides a Sequencer that can run methods in background.</td>
+                    <td>Provides fractals that can be visualized.</td>
                 </tr>
                 <tr>
                     <th>
@@ -65,22 +65,20 @@
                         <img src="Images/package_icon.png" class="icon">
                     </th>
                     <td>
-                        <a href="Javadoc/ch/nolix/core/sequencer/package-summary.html" target="_blank" class="link">ch.nolix.core.sequencer</a>
+                        <a href="Javadoc/ch/nolix/techAPI/genericMathAPI/package-summary.html" target="_blank" class="link">ch.nolix.techAPI.genericMathAPI</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <p>Documents</p>
+                        <img src="Images/pdf_icon.png" class="icon">
+                    </th>
+                    <td>
+                        <a href="Documents/nolix fractals.pdf" target="_blank" class="link">Nolix fractals</a>                     
                     </td>
                 </tr>
             </table>
-            <h2>How to run a function in background</h2>
-            <p class="codeBlock">Sequencer.runInBackground(() -&gt; doCalculations());</p>
-            <h2>How to check if a background run is finished</h2>
-            <p class="codeBlock">
-                Future future = Sequencer.runInBackground(() -&gt; doCalculations());<br>
-                ...<br>
-                if (future.isFinishedSuccessfully()) {<br>
-                &nbsp;&nbsp;...<br>
-                }
-            </p>
-            <h2>How to wait for 500 milliseconds</h2>
-            <p class="codeBlock">Sequencer.waitForMilliseocnds(500);</p>
+            <img src="Images/fractal.png" alt="fractal" class="contentImage">
         </div>
         <div class="footerDiv">
             <div class="innerFooterDiv">Copyright &copy; Silvan Wyss, 2019</div>
