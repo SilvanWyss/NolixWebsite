@@ -1,2 +1,4 @@
-#Binary files
-*.jar
+Documents/*
+Downloads/*
+Images/*
+Javadoc/*
