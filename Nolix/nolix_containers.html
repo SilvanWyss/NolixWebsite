@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nolix Java Library</title>
+        <meta name="author" content="Silvan Wyss">
+        <meta name="keywords" content="containers, search function">
+        <link href="style2.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="headerDiv">
+            <div class="innerHeaderDiv">
+                <div class="headerLinkDiv">
+                    <a href="download.html" target="_blank" class="link">Download</a>
+                    <a href="Javadoc/overview-summary.html" target="_blank" class="link">Javadoc</a>
+                </div>
+                <div class="titleDiv">
+                    <img src="Images/nolix_logo.png" alt="Nolix logo" class="logoImage">
+                    <p class="headerSubTitle">a Java library for business and science</p>
+                </div>
+                <div class="navigationDiv">
+                    <div class="tab">
+                        <div class="tabHeader">Main Features</div>
+                        <div class="subNavigationDiv">
+                            <a href="index.html" class="subNavigationOverviewLink">Overview</a>
+                            <a href="nolix_console_clients.html" class="subNavigationLink">Nolix console clients</a>
+                            <a href="nolix_gui.html" class="subNavigationLink">Nolix GUI</a>
+                            <a href="nolix_fractals.html" class="subNavigationLink">Nolix fractals</a>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="currentTabHeader">Technical Features</div>
+                        <div class="subNavigationDiv">
+                            <a href="technical_features.html" class="subNavigationOverviewLink">Overview</a>
+                            <a href="nolix_containers.html" class="subNavigationLink">Nolix containers</a>
+                            <a href="nolix_logger.html" class="subNavigationLink">Nolix Logger</a>
+                            <a href="nolix_sequencer.html" class="subNavigationLink">Nolix Sequencer</a>
+                            <a href="nolix_tests.html" class="subNavigationLink">Nolix tests</a>
+                            <a href="nolix_validator.html" class="subNavigationLink">Nolix Validator</a>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="tabHeader">Development</div>
+                        <div class="subNavigationDiv">
+                            <a href="download.html" class="subNavigationOverviewLink">Download</a>
+                            <a href="main_packages.html" class="subNavigationLink">Main packages</a>
+                            <a href="nolix_in_code_city.html" class="subNavigationLink">Nolix in CodeCity</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contentDiv">
+            <h1>Nolix containers</h1>
+            <table>
+                <tr>
+                    <th>
+                        <p>Description</p>
+                        <img src="Images/info_icon.png" class="icon">
+                    </th>
+                    <td>Provides containers with various search methods.</td>
+                </tr>
+                <tr>
+                    <th>
+                        <p>Packages</p>
+                        <img src="Images/package_icon.png" class="icon">
+                    </th>
+                    <td>
+                        <a href="Javadoc/ch/nolix/core/container/package-summary.html" target="blank_" class="link">ch.nolix.core.container</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <p>Documents</p>
+                        <img src="Images/pdf_icon.png" class="icon">
+                    </th>
+                    <td>
+                        <a href="Documents/nolix containers.pdf" target="_blank" class="link">Nolix containers</a>                     
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <h2>How to create a ReadContainer for an array</h2>
+            <p class="codeBlock">
+                String[] namesArray;<br>
+                ...<br>
+                ReadContainer&lt;String&gt; names = new ReadContainer&lt;String&gt;(namesArray);<br>
+            </p>
+            <h2>How to get a subset of a List</h2>
+            <p class="codeBlock">
+                List&lt;Person&gt; persons;<br>
+                ...<br>
+                List&lt;Person&gt; seniors = persons.getRefSelected(p -&gt; p.getAge() &gt; 65);
+            </p>
+            <h2>How to get some values from the elements of a List</h2>
+            <p class="codeBlock">
+                List&lt;Person&gt; persons;<br>
+                ...<br>
+                List&lt;Integer&gt; ages = persons.to(p -&gt; p.getAge());
+            </p>
+            <h2>How to get an average from the elements of List</h2>
+            <p class="codeBlock">
+                List&lt;Person&gt; persons;<br>
+                ...<br>
+                double averageAge = persons.getAverageByInt(p -&gt; p.getAge());
+            </p>
+        </div>
+        <div class="footerDiv">
+            <div class="innerFooterDiv">Copyright &copy; Silvan Wyss, 2019</div>
+        </div>
+    </body>
+</html>

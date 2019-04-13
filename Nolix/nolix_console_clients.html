@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nolix Java Library</title>
+        <meta name="author" content="Silvan Wyss">
+        <meta name="keywords" content="console application, console client">
+        <link href="style2.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="headerDiv">
+            <div class="innerHeaderDiv">
+                <div class="headerLinkDiv">
+                    <a href="download.html" target="_blank" class="link">Download</a>
+                    <a href="Javadoc/overview-summary.html" target="_blank" class="link">Javadoc</a>
+                </div>
+                <div class="titleDiv">
+                    <img src="Images/nolix_logo.png" alt="Nolix logo" class="logoImage">
+                    <p class="headerSubTitle">a Java library for business and science</p>
+                </div>
+                <div class="navigationDiv">
+                    <div class="tab">
+                        <div class="currentTabHeader">Main Features</div>
+                        <div class="subNavigationDiv">
+                            <a href="index.html" class="subNavigationOverviewLink">Overview</a>
+                            <a href="nolix_console_clients.html" class="subNavigationLink">Nolix console clients</a>
+                            <a href="nolix_gui.html" class="subNavigationLink">Nolix GUI</a>
+                            <a href="nolix_fractals.html" class="subNavigationLink">Nolix fractals</a>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="tabHeader">Technical Features</div>
+                        <div class="subNavigationDiv">
+                            <a href="technical_features.html" class="subNavigationOverviewLink">Overview</a>
+                            <a href="nolix_containers.html" class="subNavigationLink">Nolix containers</a>
+                            <a href="nolix_logger.html" class="subNavigationLink">Nolix Logger</a>
+                            <a href="nolix_sequencer.html" class="subNavigationLink">Nolix Sequencer</a>
+                            <a href="nolix_tests.html" class="subNavigationLink">Nolix tests</a>
+                            <a href="nolix_validator.html" class="subNavigationLink">Nolix Validator</a>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="tabHeader">Development</div>
+                        <div class="subNavigationDiv">
+                            <a href="download.html" class="subNavigationOverviewLink">Download</a>
+                            <a href="main_packages.html" class="subNavigationLink">Main packages</a>
+                            <a href="nolix_in_code_city.html" class="subNavigationLink">Nolix in CodeCity</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contentDiv">
+            <h1>Nolix console clients</h1>        
+            <table>
+                <tr>
+                    <th>
+                        <p>Description</p>
+                        <img src="Images/info_icon.png" class="icon">
+                    </th>
+                    <td>Provides console applications as client-server-programs.</td>
+                </tr>
+                <tr>
+                    <th>
+                        <p>Packages</p>
+                        <img src="Images/package_icon.png" class="icon">
+                    </th>
+                    <td>
+                        <a href="Javadoc/ch/nolix/system/consoleClient/package-summary.html" target="blank_" class="link">ch.nolix.system.consoleClient</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <p>Tutorials</p>
+                        <img src="Images/java_source_file_icon.png" class="icon">
+                    </th>
+                    <td>
+                        <a href="console_client_tutorial.html" target="_blank" class="link">Console client tutorial</a>                      
+                    </td>
+                </tr>
+            </table>
+            <div class="containerDiv">
+                <img src="Images/grey_blue_console_design.png" alt="console client in grey blue design" class="image">
+                <img src="Images/green_console_design.png" alt="console client in green design" class="image">
+            </div>
+            <br>
+            <br>                
+            <h2>How to create a Server</h2>
+            <p class="codeBlock">Server server = new Server(50000);</p>
+            <h2>How to create an Application for ConsoleFrontClients</h2>
+            <p class="codeBlock">
+                StandardApplication&ltConsoleFrontClient&gt application = new StandardApplication&ltConsoleFrontClient&gt("Demo", MySession.class);<br>
+                <br>
+                server.addApplication(application);
+            </p>
+            <h2>How to define a Session for ConsoleFrontClients</h2>
+            <p class="codeBlock">
+                public class MySession extends Session&ltConsoleBackClient&gt {<br>
+                &nbsp;&nbsp;public void initailize() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;writeLineToConsole("Welcome!");<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;writeLineToConsole("Enter your name.");<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;var name = readLineFromConsole();<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;writeLineToConsole("Hi " + name + " .");<br>
+                &nbsp;&nbsp;}<br>
+                }<br>
+            </p>
+            <h2>How to create a FrontConsoleClient</h2>
+            <p class="codeBlock">
+                ConsoleFrontClient consoleFrontClient = new ConsoleFrontClient("200.200.200.200", 50000, "Demo");
+            </p>
+            <h2>How to set the look of a ConsoleFrontClient</h2>
+            <p class="codeBlock">
+                    public class MySession extends Session&ltConsoleBackClient&gt {<br>
+                    &nbsp;&nbsp;public void initailize() {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;setLook(new BlackGreenFrontConsoleClientLook());<br>
+                    &nbsp;&nbsp;}<br>
+                    }<br>
+                </p>
+        </div>
+        <div class="footerDiv">
+            <div class="innerFooterDiv">Copyright &copy; Silvan Wyss, 2019</div>
+        </div>
+    </body>
+</html>

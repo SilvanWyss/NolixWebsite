@@ -1,0 +1,288 @@
+* {
+    font-size: 20px;
+    font-family: 'Calibri';
+    color: #202020;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0px;
+    overflow-y: scroll;
+}
+
+h1 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+h2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+ol, ul {
+    padding-left: 20px;
+}
+
+p {
+    margin: 0px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+td {
+    width: 600px;
+    background-color: #E0E0E0;
+}
+
+td, th {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FFFFFF;
+    padding: 10px;
+}
+
+th {
+    width: 120px;
+    background-color: #E0E0E0;
+}
+
+tr {
+    text-align: left;
+    vertical-align: top;
+}
+
+ul {
+    margin: 0px;
+}
+
+.blockLink {
+    display: block;
+}
+
+.borderDiv {
+    border-style: solid;
+    border-width: 1px;
+    padding: 20px;
+}
+
+.button {
+    display: block;
+    margin-bottom: 20px;
+    width: 180px;
+    background-color: #0000A0;
+    padding: 5px;
+    text-align: center;
+}
+
+.button * {
+    color: #FFFFFF;
+}
+
+.button:hover {
+    transition: 200ms;
+    background-color: #0000F0;
+}
+
+.codeBlock {
+    margin-bottom: 20px;
+    background-color: #E0E0E0;
+    padding: 10px;
+    text-align: left;
+    font-family: monospace;
+    font-size: 15px;
+    color: black;
+    cursor: text;
+}
+
+.containerDiv {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.contentDiv {
+    min-height: 500px;
+    padding-top: 180px;
+    padding-bottom: 100px;
+    overflow: hidden;
+}
+
+.contentDiv, .innerFooterDiv, .innerHeaderDiv {
+    margin: 0px auto 0px;
+    margin: 0 auto;
+    width: 80vw; 
+}
+
+.contentImage {
+    margin-bottom: 20px;
+    width: 50vw;
+}
+
+.footerDiv {
+    height: 200px;
+}
+
+.footerDiv, .headerDiv {
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.9;
+}
+
+.headerDiv {
+    position: fixed;
+    z-index: 1;
+}
+
+.headerLinkDiv {
+    margin-bottom: 10px;
+}
+
+.headerLinkDiv a {
+    margin-right: 50px;
+}
+
+.headerSubTitle {
+    float: left;
+    margin-top: 15px;
+    font-family: Tahoma;
+    font-size: 25px;
+    font-style: italic;
+    color: #E0E0E0;
+}
+
+.icon {
+    width: 50px;
+}
+
+.image {
+    display: block;
+    float: left;
+    margin-right: 20px;
+    width: 400px;
+}
+
+.indexSubDiv {
+    height: 440px;
+}
+
+.indexSubDiv {
+    float: left;
+    width: 440px;
+    margin-right: 20px;
+    background-color: #E0E0E0;
+    padding: 10px;
+}
+
+.indexSubDivImage {
+    height: 300px;
+}
+
+.innerFooterDiv {
+    padding: 20px;
+    color: #E0E0E0;
+}
+
+.innerHeaderDiv {
+    padding-top: 10px;
+}
+
+.link, .blockLink {
+    color: #0000E0;
+}
+
+.link:hover, .blockLink:hover {
+    transition: 200ms;
+    text-decoration: underline;
+}
+
+.logoImage {
+    float: left;
+    margin-right: 20px;
+    height: 40px;
+}
+
+.navigationDiv {
+    overflow: hidden;
+}
+
+.smallButtonText {
+    font-size: 16px;
+}
+
+.smallContentImage {
+    width: 25vw;
+}
+
+.subNavigationDiv {
+    display: none;
+    position: fixed;
+    background-color: #000000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.subNavigationLink, .subNavigationOverviewLink  {
+    display: block;
+    float: none;
+    min-width: 220px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    color: #E0E0E0;
+}
+
+.subNavigationLink:hover, .subNavigationOverviewLink:hover {
+    transition: 200ms;
+    text-decoration: underline;
+}
+
+.subNavigationOverviewLink {
+    margin-bottom: 20px;
+}
+
+.tab {
+    float: left;
+    overflow: hidden;
+    text-decoration-color: #E0E0E0;
+}
+
+.tab:hover {
+    transition: 200ms;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: #E0E0E0;
+}
+
+.tab:hover .subNavigationDiv {
+    display: block;
+}
+
+.tabHeader, .currentTabHeader {
+    transition: 200ms;
+    width: 220px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    font-size: 25px;
+    color: #FFFFFF;
+}
+
+.textLine {
+    margin-top: 20px;
+}
+
+.titleDiv {
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
