@@ -86,13 +86,13 @@
             <br>                
             <h2>How to create a Server</h2>
             <p class="codeBlock">Server server = new Server(50000);</p>
-            <h2>How to create an Application for ConsoleFrontClients</h2>
+            <h2>How to create an Application for ConsoleBackClients</h2>
             <p class="codeBlock">
-                StandardApplication&ltConsoleFrontClient&gt application = new StandardApplication&ltConsoleFrontClient&gt("Demo", MySession.class);<br>
+                StandardApplication&ltConsoleBackClient&gt application = new StandardApplication&ltConsoleBackClient&gt("Demo", MySession.class);<br>
                 <br>
                 server.addApplication(application);
             </p>
-            <h2>How to define a Session for ConsoleFrontClients</h2>
+            <h2>How to define a Session for ConsoleBackClients</h2>
             <p class="codeBlock">
                 public class MySession extends Session&ltConsoleBackClient&gt {<br>
                 &nbsp;&nbsp;public void initailize() {<br>
@@ -105,9 +105,9 @@
             </p>
             <h2>How to create a FrontConsoleClient</h2>
             <p class="codeBlock">
-                ConsoleFrontClient consoleFrontClient = new ConsoleFrontClient("200.200.200.200", 50000, "Demo");
+                FrontConsoleClient frontConsoleClient = new FrontConsoleClient("200.200.200.200", 50000, "Demo");
             </p>
-            <h2>How to set the look of a ConsoleFrontClient</h2>
+            <h2>How to set the look of a BackConsoleClient</h2>
             <p class="codeBlock">
                     public class MySession extends Session&ltConsoleBackClient&gt {<br>
                     &nbsp;&nbsp;public void initailize() {<br>
