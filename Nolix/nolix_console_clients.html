@@ -86,15 +86,15 @@
             <br>                
             <h2>How to create a Server</h2>
             <p class="codeBlock">Server server = new Server(50000);</p>
-            <h2>How to create an Application for ConsoleBackClients</h2>
+            <h2>How to create an Application for BackConsoleClients</h2>
             <p class="codeBlock">
-                StandardApplication&ltConsoleBackClient&gt application = new StandardApplication&ltConsoleBackClient&gt("Demo", MySession.class);<br>
+                StandardApplication&ltBackConsoleClient&gt application = new StandardApplication&ltBackConsoleClient&gt("Demo", MySession.class);<br>
                 <br>
                 server.addApplication(application);
             </p>
-            <h2>How to define a Session for ConsoleBackClients</h2>
+            <h2>How to define a Session for BackConsoleClients</h2>
             <p class="codeBlock">
-                public class MySession extends Session&ltConsoleBackClient&gt {<br>
+                public class MySession extends Session&ltBackConsoleClient&gt {<br>
                 &nbsp;&nbsp;public void initailize() {<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;writeLineToConsole("Welcome!");<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;writeLineToConsole("Enter your name.");<br>
@@ -109,7 +109,7 @@
             </p>
             <h2>How to set the look of a BackConsoleClient</h2>
             <p class="codeBlock">
-                    public class MySession extends Session&ltConsoleBackClient&gt {<br>
+                    public class MySession extends Session&ltBackConsoleClient&gt {<br>
                     &nbsp;&nbsp;public void initailize() {<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;setLook(new BlackGreenFrontConsoleClientLook());<br>
                     &nbsp;&nbsp;}<br>
