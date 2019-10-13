@@ -1,7 +1,7 @@
 * {
     font-size: 20px;
     font-family: 'Calibri';
-    color: #202020;
+    color: #606080;
 }
 
 a {
@@ -42,20 +42,21 @@ table {
 
 td {
     width: 600px;
-    background-color: #E0E0E0;
+    background-color: #E0E0F0;
 }
 
 td, th {
     border-style: solid;
-    border-width: 2px;
+    border-width: 3px;
     border-color: #FFFFFF;
     padding: 10px;
     font-size: 20px;
+    color: #606080;
 }
 
 th {
     width: 200px;
-    background-color: #E0E0E0;
+    background-color: #E0E0F0;
 }
 
 tr {
@@ -97,12 +98,12 @@ ul {
 
 .codeBlock {
     margin-bottom: 20px;
-    background-color: #E0E0E0;
+    background-color: #E0E0F0;
     padding: 10px;
     text-align: left;
     font-family: monospace;
     font-size: 15px;
-    color: black;
+    color: #606080;
     cursor: text;
 }
 
@@ -158,7 +159,7 @@ ul {
     font-family: Tahoma;
     font-size: 25px;
     font-style: italic;
-    color: #E0E0E0;
+    color: #FFFFFF;
 }
 
 .icon {
@@ -180,7 +181,7 @@ ul {
     float: left;
     width: 440px;
     margin-right: 20px;
-    background-color: #E0E0E0;
+    background-color: #E0E0F0;
     padding: 10px;
 }
 
@@ -190,7 +191,7 @@ ul {
 
 .innerFooterDiv {
     padding: 20px;
-    color: #E0E0E0;
+    color: #FFFFFF;
 }
 
 .innerHeaderDiv {
@@ -239,7 +240,7 @@ ul {
     padding-top: 2px;
     padding-bottom: 2px;
     padding-left: 10px;
-    color: #E0E0E0;
+    color: #FFFFFF;
 }
 
 .subNavigationLink:hover, .subNavigationOverviewLink:hover {
@@ -254,14 +255,14 @@ ul {
 .tab {
     float: left;
     overflow: hidden;
-    text-decoration-color: #E0E0E0;
+    text-decoration-color: #FFFFFF;
 }
 
 .tab:hover {
     transition: 200ms;
     cursor: pointer;
     text-decoration: underline;
-    text-decoration-color: #E0E0E0;
+    text-decoration-color:#FFFFFF;
 }
 
 .tab:hover .subNavigationDiv {
