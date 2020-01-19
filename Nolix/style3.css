@@ -114,6 +114,23 @@ ul {
     cursor: text;
 }
 
+.containerDiv {
+    overflow: hidden;
+}
+
+.containerSubDiv {
+    float: left;
+    width: 440px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #E0E0F0;
+    padding: 10px;
+}
+
+.containerSubDiv img {
+    height: 300px;
+}
+
 .contentDiv {
     min-height: 80vh;
     padding-top: 180px;
@@ -167,18 +184,6 @@ ul {
 .image {
     margin-bottom: 20px;
     width: 100%;
-}
-
-.containerDiv {
-    float: left;
-    width: 440px;
-    margin-right: 20px;
-    background-color: #E0E0F0;
-    padding: 10px;
-}
-
-.containerDiv img {
-    height: 300px;
 }
 
 .innerFooterDiv {
