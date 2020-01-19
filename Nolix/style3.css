@@ -125,11 +125,6 @@ ul {
     width: 80vw; 
 }
 
-.contentImage {
-    margin-bottom: 20px;
-    width: 50vw;
-}
-
 .footerDiv {
     min-height: 20vh;
 }
@@ -168,10 +163,8 @@ ul {
 }
 
 .image {
-    display: block;
-    float: left;
-    margin-right: 20px;
-    width: 400px;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 .indexSubDiv {
@@ -220,10 +213,6 @@ ul {
 
 .smallButtonText {
     font-size: 16px;
-}
-
-.smallContentImage {
-    width: 25vw;
 }
 
 .subNavigationDiv {
