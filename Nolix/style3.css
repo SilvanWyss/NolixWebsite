@@ -16,11 +16,18 @@ body {
 h1 {
     margin-top: 0px;
     margin-bottom: 10px;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: normal;
 }
 
 h2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 35px;
+    font-weight: normal;
+}
+
+h3 {
     margin-top: 0px;
     margin-bottom: 10px;
     font-size: 25px;
@@ -107,11 +114,6 @@ ul {
     cursor: text;
 }
 
-.containerDiv {
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-
 .contentDiv {
     min-height: 80vh;
     padding-top: 180px;
@@ -167,11 +169,7 @@ ul {
     width: 100%;
 }
 
-.indexSubDiv {
-    height: 440px;
-}
-
-.indexSubDiv {
+.containerDiv {
     float: left;
     width: 440px;
     margin-right: 20px;
@@ -179,7 +177,7 @@ ul {
     padding: 10px;
 }
 
-.indexSubDivImage {
+.containerDiv img {
     height: 300px;
 }
 
@@ -213,6 +211,10 @@ ul {
 
 .smallButtonText {
     font-size: 16px;
+}
+
+.smallImage {
+    width: 50%;
 }
 
 .subNavigationDiv {
