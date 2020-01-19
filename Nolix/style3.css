@@ -164,6 +164,7 @@ ul {
 
 .icon {
     width: 50px;
+    opacity: 0.5;
 }
 
 .image {
