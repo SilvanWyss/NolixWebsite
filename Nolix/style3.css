@@ -233,7 +233,7 @@ ul {
     padding-bottom: 10px;
 }
 
-.subNavigationLink, .subNavigationOverviewLink  {
+.subNavigationLink  {
     display: block;
     float: none;
     min-width: 220px;
@@ -243,13 +243,9 @@ ul {
     color: #FFFFFF;
 }
 
-.subNavigationLink:hover, .subNavigationOverviewLink:hover {
+.subNavigationLink:hover {
     transition: 200ms;
     text-decoration: underline;
-}
-
-.subNavigationOverviewLink {
-    margin-bottom: 20px;
 }
 
 .tab {
