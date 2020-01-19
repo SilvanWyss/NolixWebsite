@@ -118,7 +118,7 @@ ul {
     overflow: hidden;
 }
 
-.containerSubDiv {
+.containerDiv div {
     float: left;
     width: 440px;
     margin-right: 20px;
@@ -127,7 +127,7 @@ ul {
     padding: 10px;
 }
 
-.containerSubDiv img {
+.containerDiv div img {
     height: 300px;
 }
 
