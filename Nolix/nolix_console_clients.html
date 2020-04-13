@@ -81,16 +81,16 @@
             <br>
             <br>                
             <h2>How to create a Server</h2>
-            <p class="codeBlock">Server server = new Server(50000);</p>
+            <p class="codeBlock">var server = new Server(50000);</p>
             <h2>How to create an Application for BackConsoleClients</h2>
             <p class="codeBlock">
-                StandardApplication&ltBackConsoleClient&gt application = new StandardApplication&ltBackConsoleClient&gt("Demo", MySession.class);<br>
+                var application = new Application&lt&gt("Demo", BackConsoleClient.class, MainSession.class);<br>
                 <br>
                 server.addApplication(application);
             </p>
             <h2>How to define a Session for BackConsoleClients</h2>
             <p class="codeBlock">
-                public class MySession extends Session&ltBackConsoleClient&gt {<br>
+                public class MainSession extends BackConsoleClientSession {<br>
                 &nbsp;&nbsp;public void initailize() {<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;writeLineToConsole("Welcome!");<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;writeLineToConsole("Enter your name.");<br>
@@ -99,18 +99,32 @@
                 &nbsp;&nbsp;}<br>
                 }<br>
             </p>
-            <h2>How to create a FrontConsoleClient</h2>
+            <h2>How to create a FrontConsoleClient that connects from same program</h2>
             <p class="codeBlock">
-                FrontConsoleClient frontConsoleClient = new FrontConsoleClient("200.200.200.200", 50000, "Demo");
+                var frontConsoleClient = new FrontConsoleClient(server, "Demo");
+            </p>
+            <h2>How to create a FrontConsoleClient that connects over the network</h2>
+            <p class="codeBlock">
+                var frontConsoleClient = new FrontConsoleClient("127.0.0.1", 50000, "Demo");
             </p>
             <h2>How to set the look of a BackConsoleClient</h2>
             <p class="codeBlock">
-                    public class MySession extends Session&ltBackConsoleClient&gt {<br>
-                    &nbsp;&nbsp;public void initailize() {<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;setLook(new BlackGreenFrontConsoleClientLook());<br>
-                    &nbsp;&nbsp;}<br>
-                    }<br>
-                </p>
+                public class MainSession extends Session&ltBackConsoleClient&gt {<br>
+                &nbsp;&nbsp;public void initailize() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;setLook(new BlackGreenConsoleClientLook());<br>
+                &nbsp;&nbsp;}<br>
+                }<br>
+            </p>
+            <h2>How to define a custom look for BackConsoleClients</h2>
+            <p class="codeBlock">
+                public class CustomConsoleClientLook extends StandardConfiguration { {<br>
+                &nbsp;&nbsp;public CustomConsoleClientLook() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;addAttachingAttribute("BackgroundColor(0x080F08)");<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                &nbsp;&nbsp;}<br>
+                }<br>
+            </p>
         </div>
         <div class="footerDiv">
             <div class="innerFooterDiv">Copyright &copy; Silvan Wyss, 2020</div>
