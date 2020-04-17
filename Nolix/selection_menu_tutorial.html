@@ -19,97 +19,73 @@
             <h1>SelectionMenuTutorial</h1>
             <h2>Source code</h2>
             
-				<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">package</span> ch<span style="color: #333333">.</span><span style="color: #0000CC">nolix</span><span style="color: #333333">.</span><span style="color: #0000CC">systemTutorial</span><span style="color: #333333">.</span><span style="color: #0000CC">consoleClientTutorial</span><span style="color: #333333">;</span>
+				
+			<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">package</span> ch<span style="color: #333333">.</span><span style="color: #0000CC">nolix</span><span style="color: #333333">.</span><span style="color: #0000CC">elementTutorial</span><span style="color: #333333">.</span><span style="color: #0000CC">widgetsTutorial</span><span style="color: #333333">;</span>
 
-<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">ch.nolix.common.sequencer.Sequencer</span><span style="color: #333333">;</span>
-<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">ch.nolix.elementTutorial.widgetsTutorial.SelectionMenuTutorial</span><span style="color: #333333">;</span>
-<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">ch.nolix.system.client.Application</span><span style="color: #333333">;</span>
-<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">ch.nolix.system.consoleClient.BackConsoleClient</span><span style="color: #333333">;</span>
-<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">ch.nolix.system.consoleClient.BackConsoleClientSession</span><span style="color: #333333">;</span>
-<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">ch.nolix.system.consoleClient.FrontConsoleClient</span><span style="color: #333333">;</span>
-<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">ch.nolix.templates.consoleClientLooks.BlackRedConsoleClientLook</span><span style="color: #333333">;</span>
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">ch.nolix.element.GUI.Frame</span><span style="color: #333333">;</span>
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">ch.nolix.element.color.Color</span><span style="color: #333333">;</span>
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">ch.nolix.element.frameVisualizer.FrameVisualizer</span><span style="color: #333333">;</span>
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">ch.nolix.element.widgets.SelectionMenu</span><span style="color: #333333">;</span>
 
 <span style="color: #888888">/**</span>
-<span style="color: #888888"> * The {@link BackConsoleClientTutorial} is a tutorial for {@link BackConsoleClient}s.</span>
-<span style="color: #888888"> * Of the {@link BackConsoleClientTutorial} an instance cannot be created.</span>
+<span style="color: #888888"> * The {@link SelectionMenuTutorial} is a tutorial for {@link SelectionMenu}s.</span>
+<span style="color: #888888"> * Of the {@link SelectionMenuTutorial} an instance cannot be created.</span>
 <span style="color: #888888"> * </span>
 <span style="color: #888888"> * @author Silvan Wyss</span>
-<span style="color: #888888"> * @month 2017-08</span>
-<span style="color: #888888"> * @lines 90</span>
+<span style="color: #888888"> * @month 2018-05</span>
 <span style="color: #888888"> */</span>
-<span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">final</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">BackConsoleClientTutorial</span> <span style="color: #333333">{</span>
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">final</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">SelectionMenuTutorial</span> <span style="color: #333333">{</span>
 	
 	<span style="color: #888888">/**</span>
-<span style="color: #888888">	 * 1. Creates a {@link Application} for {@link BackConsoleClient}s.</span>
-<span style="color: #888888">	 * 2. Creates a {@link FrontConsoleClient} that will connect to the application.</span>
+<span style="color: #888888">	 * Creates a {@link FrameVisualizer} with a {@link SelectionMenu}.</span>
 <span style="color: #888888">	 * </span>
-<span style="color: #888888">	 * @param arguments</span>
+<span style="color: #888888">	 * @param args</span>
 <span style="color: #888888">	 */</span>
-	<span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">static</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span><span style="color: #333333">(</span><span style="color: #008800; font-weight: bold">final</span> String<span style="color: #333333">[]</span> arguments<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+	<span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">static</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span><span style="color: #333333">(</span>String<span style="color: #333333">[]</span> args<span style="color: #333333">)</span> <span style="color: #333333">{</span>
 		
-		<span style="color: #888888">//Creates an Application.</span>
-		<span style="color: #008800; font-weight: bold">final</span> var application
-		<span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">new</span> Application<span style="color: #333333">&lt;</span>BackConsoleClient<span style="color: #333333">&gt;(</span>
-			<span style="background-color: #fff0f0">&quot;MyApplication&quot;</span><span style="color: #333333">,</span>
-			BackConsoleClient<span style="color: #333333">.</span><span style="color: #0000CC">class</span><span style="color: #333333">,</span>
-			MainSession<span style="color: #333333">.</span><span style="color: #0000CC">class</span>
+		<span style="color: #888888">//Creates a Frame.</span>
+		<span style="color: #008800; font-weight: bold">final</span> var frame <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">new</span> Frame<span style="color: #333333">(</span><span style="background-color: #fff0f0">&quot;Selection Menu Tutorial&quot;</span><span style="color: #333333">);</span>
+		
+		<span style="color: #888888">//Creates a SelectionMenu.</span>
+		<span style="color: #008800; font-weight: bold">final</span> var selectionMenu <span style="color: #333333">=</span>
+		<span style="color: #008800; font-weight: bold">new</span> <span style="color: #0066BB; font-weight: bold">SelectionMenu</span><span style="color: #333333">(</span>
+			<span style="background-color: #fff0f0">&quot;Gottfried Wilhelm Leibniz&quot;</span><span style="color: #333333">,</span>
+			<span style="background-color: #fff0f0">&quot;Immanuel Kant&quot;</span><span style="color: #333333">,</span>
+			<span style="background-color: #fff0f0">&quot;Johann Gottlieb Fichte&quot;</span><span style="color: #333333">,</span>
+			<span style="background-color: #fff0f0">&quot;Georg Wilehlm Friedrich Hegel&quot;</span><span style="color: #333333">,</span>
+			<span style="background-color: #fff0f0">&quot;Arthur Schopenhauer&quot;</span><span style="color: #333333">,</span>
+			<span style="background-color: #fff0f0">&quot;Johann Gottfried Herder&quot;</span><span style="color: #333333">,</span>
+			<span style="background-color: #fff0f0">&quot;Karl Marx&quot;</span><span style="color: #333333">,</span>
+			<span style="background-color: #fff0f0">&quot;Friedrich Nietzsche&quot;</span><span style="color: #333333">,</span>
+			<span style="background-color: #fff0f0">&quot;Ludwig Wittgenstein&quot;</span><span style="color: #333333">,</span>
+			<span style="background-color: #fff0f0">&quot;Theodor W. Adorno&quot;</span><span style="color: #333333">,</span>
+			<span style="background-color: #fff0f0">&quot;Jürgen Habermas&quot;</span><span style="color: #333333">,</span>
+			<span style="background-color: #fff0f0">&quot;Richard David Precht&quot;</span>
 		<span style="color: #333333">);</span>
 		
-		<span style="color: #888888">//Creates a FrontConsoleClient that will connect to application.</span>
-		<span style="color: #008800; font-weight: bold">new</span> <span style="color: #0066BB; font-weight: bold">FrontConsoleClient</span><span style="color: #333333">(</span>application<span style="color: #333333">);</span>
-	<span style="color: #333333">}</span>
-	
-	<span style="color: #008800; font-weight: bold">private</span> <span style="color: #008800; font-weight: bold">static</span> <span style="color: #008800; font-weight: bold">final</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">MainSession</span> <span style="color: #008800; font-weight: bold">extends</span> BackConsoleClientSession <span style="color: #333333">{</span>
+		<span style="color: #888888">//Configures the look of the selectionMenu.</span>
+		selectionMenu
+		<span style="color: #333333">.</span><span style="color: #0000CC">setMaxHeight</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">200</span><span style="color: #333333">)</span>			
+		<span style="color: #333333">.</span><span style="color: #0000CC">applyOnBaseLook</span><span style="color: #333333">(</span>
+			bl <span style="color: #333333">-&gt;</span>
+			bl			
+			<span style="color: #333333">.</span><span style="color: #0000CC">setBorderThicknesses</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333333">)</span>
+			<span style="color: #333333">.</span><span style="color: #0000CC">setBorderColors</span><span style="color: #333333">(</span>Color<span style="color: #333333">.</span><span style="color: #0000CC">DARK_BLUE</span><span style="color: #333333">)</span>
+			<span style="color: #333333">.</span><span style="color: #0000CC">setBackgroundColor</span><span style="color: #333333">(</span>Color<span style="color: #333333">.</span><span style="color: #0000CC">WHITE_SMOKE</span><span style="color: #333333">)</span>
+			<span style="color: #333333">.</span><span style="color: #0000CC">setItemPadding</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333333">)</span>
+		<span style="color: #333333">);</span>
 		
-		<span style="color: #555555; font-weight: bold">@Override</span>
-		<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">initialize</span><span style="color: #333333">()</span> <span style="color: #333333">{</span>
-			
-			setLook<span style="color: #333333">(</span><span style="color: #008800; font-weight: bold">new</span> BlackRedConsoleClientLook<span style="color: #333333">());</span>
-			
-			writeLineToInfoPanel<span style="color: #333333">(</span>
-				<span style="background-color: #fff0f0">&quot;This is the info panel of the console.&quot;</span><span style="color: #333333">,</span>
-				<span style="background-color: #fff0f0">&quot;On the info panel informatiosn can be displayed.&quot;</span><span style="color: #333333">,</span>
-				<span style="background-color: #fff0f0">&quot;The info panel cannot be edited.&quot;</span>
-			<span style="color: #333333">);</span>
-			
-			writeLineToConsole<span style="color: #333333">(</span><span style="background-color: #fff0f0">&quot;Enter your name.&quot;</span><span style="color: #333333">);</span>
-			<span style="color: #008800; font-weight: bold">final</span> String name <span style="color: #333333">=</span> readLineFromConsole<span style="color: #333333">();</span>
-			writeLineToConsole<span style="color: #333333">(</span><span style="background-color: #fff0f0">&quot;Hello &quot;</span> <span style="color: #333333">+</span> name <span style="color: #333333">+</span> <span style="background-color: #fff0f0">&quot;.&quot;</span><span style="color: #333333">);</span>
-						
-			<span style="color: #333399; font-weight: bold">boolean</span> answerIsValid <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">false</span><span style="color: #333333">;</span>
-			<span style="color: #008800; font-weight: bold">do</span> <span style="color: #333333">{</span>
-				
-				writeLineToConsole<span style="color: #333333">(</span><span style="background-color: #fff0f0">&quot;Are you fine? Press y for yes, press n for no.&quot;</span><span style="color: #333333">);</span>
-				
-				<span style="color: #008800; font-weight: bold">switch</span> <span style="color: #333333">(</span>readCharacterFromConsole<span style="color: #333333">())</span> <span style="color: #333333">{</span>
-					<span style="color: #008800; font-weight: bold">case</span> <span style="color: #0044DD">&#39;y&#39;</span><span style="color: #333333">:</span>
-						answerIsValid <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">true</span><span style="color: #333333">;</span>
-						writeLineToConsole<span style="color: #333333">(</span><span style="background-color: #fff0f0">&quot;Oh good!&quot;</span><span style="color: #333333">);</span>
-						<span style="color: #008800; font-weight: bold">break</span><span style="color: #333333">;</span>
-					<span style="color: #008800; font-weight: bold">case</span> <span style="color: #0044DD">&#39;n&#39;</span><span style="color: #333333">:</span>
-						answerIsValid <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">true</span><span style="color: #333333">;</span>
-						writeLineToConsole<span style="color: #333333">(</span><span style="background-color: #fff0f0">&quot;Oh sad!&quot;</span><span style="color: #333333">);</span>
-						<span style="color: #008800; font-weight: bold">break</span><span style="color: #333333">;</span>
-					<span style="color: #008800; font-weight: bold">default</span><span style="color: #333333">:</span>
-				<span style="color: #333333">}</span>
-			<span style="color: #333333">}</span> <span style="color: #008800; font-weight: bold">while</span> <span style="color: #333333">(!</span>answerIsValid<span style="color: #333333">);</span>
-			
-			Sequencer<span style="color: #333333">.</span><span style="color: #0000CC">waitForASecond</span><span style="color: #333333">();</span>
-			
-			writeEmptyLineToConsole<span style="color: #333333">();</span>
-			writeLineToConsole<span style="color: #333333">(</span><span style="background-color: #fff0f0">&quot;Press enter to quit the program.&quot;</span><span style="color: #333333">);</span>
-			readEnterFromConsole<span style="color: #333333">();</span>
-			
-			getParentClient<span style="color: #333333">().</span><span style="color: #0000CC">close</span><span style="color: #333333">();</span>
-		<span style="color: #333333">}</span>
+		<span style="color: #888888">//Adds the selectionMenu to the frame.</span>
+		frame<span style="color: #333333">.</span><span style="color: #0000CC">addLayerOnTop</span><span style="color: #333333">(</span>selectionMenu<span style="color: #333333">);</span>
 	<span style="color: #333333">}</span>
 	
 	<span style="color: #888888">/**</span>
-<span style="color: #888888">	 * Avoids that an instance of the {@link BackConsoleClientTutorial} can be created.</span>
+<span style="color: #888888">	 * Avoids that an instance of the {@link SelectionMenuTutorial} can be created.</span>
 <span style="color: #888888">	 */</span>
-	<span style="color: #008800; font-weight: bold">private</span> <span style="color: #0066BB; font-weight: bold">BackConsoleClientTutorial</span><span style="color: #333333">()</span> <span style="color: #333333">{}</span>
+	<span style="color: #008800; font-weight: bold">private</span> <span style="color: #0066BB; font-weight: bold">SelectionMenuTutorial</span><span style="color: #333333">()</span> <span style="color: #333333">{}</span>
 <span style="color: #333333">}</span>
 </pre></div>
+
 
 				
             <h2>Output</h2>

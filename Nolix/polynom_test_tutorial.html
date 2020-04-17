@@ -18,10 +18,12 @@
 		<div class="contentDiv">
 			<h1>PolynomTest</h1>
 			
+			
 			<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">//package declaration</span>
 <span style="color: #008800; font-weight: bold">package</span> ch<span style="color: #333333">.</span><span style="color: #0000CC">nolix</span><span style="color: #333333">.</span><span style="color: #0000CC">commonTest</span><span style="color: #333333">.</span><span style="color: #0000CC">mathTest</span><span style="color: #333333">;</span>
 
 <span style="color: #888888">//own imports</span>
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">ch.nolix.common.baseTest.TestCase</span><span style="color: #333333">;</span>
 <span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">ch.nolix.common.math.Polynom</span><span style="color: #333333">;</span>
 <span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">ch.nolix.common.test.Test</span><span style="color: #333333">;</span>
 
@@ -31,11 +33,12 @@
 <span style="color: #888888"> * </span>
 <span style="color: #888888"> * @author Silvan Wyss</span>
 <span style="color: #888888"> * @month 2016-05</span>
-<span style="color: #888888"> * @lines 70</span>
+<span style="color: #888888"> * @lines 80</span>
 <span style="color: #888888"> */</span>
 <span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">final</span> <span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">PolynomTest</span> <span style="color: #008800; font-weight: bold">extends</span> Test <span style="color: #333333">{</span>
 	
-	<span style="color: #888888">//test case</span>
+	<span style="color: #888888">//method</span>
+	<span style="color: #555555; font-weight: bold">@TestCase</span>
 	<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">testCase_creation</span><span style="color: #333333">()</span> <span style="color: #333333">{</span>
 		
 		<span style="color: #888888">//execution</span>
@@ -45,7 +48,8 @@
 		expect<span style="color: #333333">(</span>polynom<span style="color: #333333">.</span><span style="color: #0000CC">getDegree</span><span style="color: #333333">()).</span><span style="color: #0000CC">isEqualTo</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333333">);</span>
 	<span style="color: #333333">}</span>
 	
-	<span style="color: #888888">//test case</span>
+	<span style="color: #888888">//method</span>
+	<span style="color: #555555; font-weight: bold">@TestCase</span>
 	<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">testCase_integrate_1</span><span style="color: #333333">()</span> <span style="color: #333333">{</span>
 		
 		<span style="color: #888888">//setup</span>
@@ -59,7 +63,8 @@
 		expect<span style="color: #333333">(</span>polynom<span style="color: #333333">.</span><span style="color: #0000CC">toString</span><span style="color: #333333">()).</span><span style="color: #0000CC">isEqualTo</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">&quot;x-&gt;2x^3&quot;</span><span style="color: #333333">);</span>
 	<span style="color: #333333">}</span>
 	
-	<span style="color: #888888">//test case</span>
+	<span style="color: #888888">//method</span>
+	<span style="color: #555555; font-weight: bold">@TestCase</span>
 	<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">testCase_integrate_2</span><span style="color: #333333">()</span> <span style="color: #333333">{</span>
 		
 		<span style="color: #888888">//setup</span>
@@ -78,7 +83,8 @@
 		expect<span style="color: #333333">(</span>coefficients<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">]).</span><span style="color: #0000CC">isEqualTo</span><span style="color: #333333">(</span><span style="color: #6600EE; font-weight: bold">6.0</span><span style="color: #333333">);</span>
 	<span style="color: #333333">}</span>
 	
-	<span style="color: #888888">//test case</span>
+	<span style="color: #888888">//method</span>
+	<span style="color: #555555; font-weight: bold">@TestCase</span>
 	<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">testCase_toString_1</span><span style="color: #333333">()</span> <span style="color: #333333">{</span>
 		
 		<span style="color: #888888">//setup</span>
@@ -88,7 +94,8 @@
 		expect<span style="color: #333333">(</span>polynom<span style="color: #333333">.</span><span style="color: #0000CC">toString</span><span style="color: #333333">()).</span><span style="color: #0000CC">isEqualTo</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">&quot;x-&gt;x^2+2x+3&quot;</span><span style="color: #333333">);</span>
 	<span style="color: #333333">}</span>
 	
-	<span style="color: #888888">//test case</span>
+	<span style="color: #888888">//method</span>
+	<span style="color: #555555; font-weight: bold">@TestCase</span>
 	<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">testCase_toString_2</span><span style="color: #333333">()</span> <span style="color: #333333">{</span>
 		
 		<span style="color: #888888">//setup</span>
@@ -99,6 +106,7 @@
 	<span style="color: #333333">}</span>
 <span style="color: #333333">}</span>
 </pre></div>
+
 
 
 		</div>

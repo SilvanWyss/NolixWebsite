@@ -22,6 +22,7 @@
         <div class="contentDiv">
             <h1>ValidatorTutorial</h1>
             
+            
             <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">package</span> ch<span style="color: #333333">.</span><span style="color: #0000CC">nolix</span><span style="color: #333333">.</span><span style="color: #0000CC">commonTutorial</span><span style="color: #333333">.</span><span style="color: #0000CC">validatorTutorial</span><span style="color: #333333">;</span>
 
 <span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">ch.nolix.common.validator.Validator</span><span style="color: #333333">;</span>
@@ -53,11 +54,11 @@
 <span style="color: #888888">	 */</span>
 	<span style="color: #008800; font-weight: bold">private</span> <span style="color: #008800; font-weight: bold">static</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">printAmount</span><span style="color: #333333">(</span><span style="color: #008800; font-weight: bold">final</span> String productName<span style="color: #333333">,</span> <span style="color: #008800; font-weight: bold">final</span> <span style="color: #333399; font-weight: bold">int</span> amount<span style="color: #333333">)</span> <span style="color: #333333">{</span>
 		
-		<span style="color: #888888">//Checks if the given productName is not null or empty.</span>
-		Validator<span style="color: #333333">.</span><span style="color: #0000CC">suppose</span><span style="color: #333333">(</span>productName<span style="color: #333333">).</span><span style="color: #0000CC">thatIsNamed</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">&quot;product name&quot;</span><span style="color: #333333">).</span><span style="color: #0000CC">isNotEmpty</span><span style="color: #333333">();</span>
+		<span style="color: #888888">//Asserts that the given productName is not null or empty.</span>
+		Validator<span style="color: #333333">.</span><span style="color: #0000CC">assertThat</span><span style="color: #333333">(</span>productName<span style="color: #333333">).</span><span style="color: #0000CC">thatIsNamed</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">&quot;product name&quot;</span><span style="color: #333333">).</span><span style="color: #0000CC">isNotEmpty</span><span style="color: #333333">();</span>
 		
-		<span style="color: #888888">//Checks if the given amount is not negative.</span>
-		Validator<span style="color: #333333">.</span><span style="color: #0000CC">suppose</span><span style="color: #333333">(</span>amount<span style="color: #333333">).</span><span style="color: #0000CC">thatIsNamed</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">&quot;amount&quot;</span><span style="color: #333333">).</span><span style="color: #0000CC">isNotNegative</span><span style="color: #333333">();</span>
+		<span style="color: #888888">//Asserts that the given amount is not negative.</span>
+		Validator<span style="color: #333333">.</span><span style="color: #0000CC">assertThat</span><span style="color: #333333">(</span>amount<span style="color: #333333">).</span><span style="color: #0000CC">thatIsNamed</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">&quot;amount&quot;</span><span style="color: #333333">).</span><span style="color: #0000CC">isNotNegative</span><span style="color: #333333">();</span>
 		
 		System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>productName <span style="color: #333333">+</span> <span style="background-color: #fff0f0">&quot;: &quot;</span> <span style="color: #333333">+</span> amount <span style="color: #333333">+</span> <span style="background-color: #fff0f0">&quot; pieces&quot;</span><span style="color: #333333">);</span>
 	<span style="color: #333333">}</span>
@@ -68,6 +69,7 @@
 	<span style="color: #008800; font-weight: bold">private</span> <span style="color: #0066BB; font-weight: bold">ValidatorTutorial</span><span style="color: #333333">()</span> <span style="color: #333333">{}</span>
 <span style="color: #333333">}</span>
 </pre></div>
+
 
 
         </div>
