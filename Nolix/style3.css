@@ -1,7 +1,7 @@
 * {
     font-size: 20px;
     font-family: 'Calibri';
-    color: #606080;
+    color: #404060;
 }
 
 a {
@@ -58,7 +58,7 @@ td, th {
     border-color: #FFFFFF;
     padding: 10px;
     font-size: 20px;
-    color: #606080;
+    color: #404060;
 }
 
 th {
@@ -89,7 +89,7 @@ ul {
     display: block;
     margin-bottom: 20px;
     width: 180px;
-    background-color: #000080;
+    background-color: #6060E0;
     padding: 5px;
     text-align: center;
 }
@@ -100,7 +100,7 @@ ul {
 
 .button:hover {
     transition: 200ms;
-    background-color: #0000C0;
+    background-color: #8080FF;
 }
 
 .codeBlock {
@@ -110,7 +110,7 @@ ul {
     text-align: left;
     font-family: monospace;
     font-size: 15px;
-    color: #606080;
+    color: #404060;
     cursor: text;
 }
 
@@ -163,7 +163,7 @@ ul {
 
 .footerDiv, .headerDiv {
     width: 100%;
-    background-color: #8080A0;
+    background-color: #404060;
     opacity: 0.9;
 }
 
@@ -209,7 +209,7 @@ ul {
 }
 
 .link, .blockLink {
-    color: #000080;
+    color: #6060E0;
 }
 
 .link:hover, .blockLink:hover {
