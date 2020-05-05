@@ -93,13 +93,13 @@
             <p class="codeBlock">
                 List&lt;Person&gt; persons;<br>
                 ...<br>
-                List&lt;Integer&gt; ages = persons.to(p -&gt; p.getAge());
+                List&lt;Integer&gt; ages = persons.to(Person::getAge);
             </p>
             <h2>How to get an average from the elements of List</h2>
             <p class="codeBlock">
                 List&lt;Person&gt; persons;<br>
                 ...<br>
-                double averageAge = persons.getAverageByInt(p -&gt; p.getAge());
+                double averageAge = persons.getAverageByInt(Person::getAge);
             </p>
         </div>
         <div class="footerDiv">
