@@ -80,15 +80,15 @@
             <img src="Images/black_red_console_design.png" alt="console client in black red design" class="image">
             <br>
             <br>                
-            <h2>How to create a NetServer</h2>
+            <h2>Create a NetServer</h2>
             <p class="codeBlock">var netServer = new NetServer(50000);</p>
-            <h2>How to create an Application for BackConsoleClients</h2>
+            <h2>Create an Application for BackConsoleClients</h2>
             <p class="codeBlock">
                 var application = new Application&lt&gt("Demo", BackConsoleClient.class, MainSession.class);<br>
                 <br>
                 netServer.addApplication(application);
             </p>
-            <h2>How to define a Session for BackConsoleClients</h2>
+            <h2>Define a Session for BackConsoleClients</h2>
             <p class="codeBlock">
                 public class MainSession extends BackConsoleClientSession {<br>
                 &nbsp;&nbsp;public void initailize() {<br>
@@ -99,15 +99,15 @@
                 &nbsp;&nbsp;}<br>
                 }<br>
             </p>
-            <h2>How to create a FrontConsoleClient that connects from the same program</h2>
+            <h2>Create a FrontConsoleClient that connects from the same program</h2>
             <p class="codeBlock">
                 var frontConsoleClient = new FrontConsoleClient(server, "Demo");
             </p>
-            <h2>How to create a FrontConsoleClient that connects over the network</h2>
+            <h2>Create a FrontConsoleClient that connects from the network</h2>
             <p class="codeBlock">
                 var frontConsoleClient = new FrontConsoleClient("127.0.0.1", 50000, "Demo");
             </p>
-            <h2>How to set the look of a BackConsoleClient</h2>
+            <h2>Set the look of a BackConsoleClient</h2>
             <p class="codeBlock">
                 public class MainSession extends Session&ltBackConsoleClient&gt {<br>
                 &nbsp;&nbsp;public void initailize() {<br>
@@ -116,7 +116,7 @@
                 &nbsp;&nbsp;}<br>
                 }<br>
             </p>
-            <h2>How to define a custom look for BackConsoleClients</h2>
+            <h2>Define a custom look for BackConsoleClients</h2>
             <p class="codeBlock">
                 public class CustomConsoleClientLook extends StandardConfiguration { {<br>
                 &nbsp;&nbsp;public CustomConsoleClientLook() {<br>
