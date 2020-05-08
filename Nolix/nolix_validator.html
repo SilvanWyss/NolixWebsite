@@ -90,21 +90,21 @@
             <h2>Validate that an argument is positive</h2>
             <p class="codeBlock">
                 public void addAmount(int amount) {<br>
-                &nbsp;&nbsp;Validator.suppose(amount).isPositive();<br>
+                &nbsp;&nbsp;Validator.assertThat(amount).isPositive();<br>
                 &nbsp;&nbsp;...<br>
                 }
             </p>
             <h2>Include the argument's name in the error message</h2>
             <p class="codeBlock">
                 public void addAmount(int amount) {<br>
-                &nbsp;&nbsp;Validator.suppose(amount).thatIsNamed("amount").isPositive();<br>
+                &nbsp;&nbsp;Validator.assertThat(amount).thatIsNamed("amount").isPositive();<br>
                 &nbsp;&nbsp;...<br>
                 }
             </p>
             <h2>Validate that several strings are not empty</h2>
             <p class="codeBlock">
                 public void addAmount(String[] names) {<br>
-                &nbsp;&nbsp;Validator.supposeTheStrings(names).areNotEmpty();<br>
+                &nbsp;&nbsp;Validator.assertThat(names).areNotEmpty();<br>
                 &nbsp;&nbsp;...<br>
                 }
             </p>
