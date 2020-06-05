@@ -91,6 +91,8 @@
             <h2>Define a Session for BackConsoleClients</h2>
             <p class="codeBlock">
                 public class MainSession extends BackConsoleClientSession {<br>
+                <br>
+                &nbsp;&nbsp;@Override<br>
                 &nbsp;&nbsp;public void initailize() {<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;writeLineToConsole("Welcome!");<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;writeLineToConsole("Enter your name.");<br>
@@ -110,6 +112,8 @@
             <h2>Set the look of a BackConsoleClient</h2>
             <p class="codeBlock">
                 public class MainSession extends Session&ltBackConsoleClient&gt {<br>
+                <br>
+                &nbsp;&nbsp;@Override<br>
                 &nbsp;&nbsp;public void initailize() {<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;setLook(new BlackGreenConsoleClientLook());<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;...<br>
