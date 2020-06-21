@@ -118,36 +118,6 @@ ul {
     cursor: text;
 }
 
-.containerDiv {
-    overflow: hidden;
-}
-
-.containerDiv div {
-    float: left;
-    width: 440px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    background-color: #E0E0F0;
-    padding: 10px;
-}
-
-.containerDiv div img {
-    height: 300px;
-}
-
-.containerDiv2 {
-    overflow: hidden;
-}
-
-.containerDiv2 div {
-    float: left;
-    width: 260px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    background-color: #E0E0F0;
-    padding: 10px;
-}
-
 .contentDiv {
     min-height: 80vh;
     padding-top: 180px;
