@@ -156,11 +156,11 @@ ul {
 
 .headerSubTitle {
     float: left;
-    margin-top: 15px;
+    margin-top: 20px;
     font-family: Tahoma;
-    font-size: 25px;
+    font-size: 20px;
     font-style: italic;
-    color: #FFFFFF;
+    color: #E0E0F0;
 }
 
 .icon {
@@ -193,7 +193,7 @@ ul {
 
 .logoImage {
     float: left;
-    margin-right: 20px;
+    margin-right: 50px;
     height: 40px;
 }
 
