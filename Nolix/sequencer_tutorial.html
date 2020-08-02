@@ -47,35 +47,21 @@
             </div>
         </div>
         <div class="contentDiv">
-            <h1>Nolix Sequencer</h1>
-            <table>
-                <tr>
-                    <th>
-                        <p>Description</p>
-                        <img src="Icons/info-icon.png" class="icon">
-                    </th>
-                    <td>Provides a Sequencer that can run methods in background.</td>
-                </tr>
-                <tr>
-                    <th>
-                        <p>Packages</p>
-                        <img src="Icons/package-icon.png" class="icon">
-                    </th>
-                    <td>
-                        <a href="Javadoc/ch/nolix/common/sequencer/package-summary.html" target="_blank" class="link">ch.nolix.common.sequencer</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <p>Tutorials</p>
-                        <img src="Icons/book-icon.png" class="icon">
-                    </th>
-                    <td>
-                        <a href="sequencer_tutorial.html" class="link">Tutorial: Sequencer</a>                      
-                    </td>
-                </tr>
-            </table>
-        </div>
+            <a href="nolix_sequencer.html" class="link">&larr; Nolix Sequencer</a>
+			<h1>Tutorial: Sequencer</h1>
+			<h2>Run a function in background</h2>
+            <p class="codeBlock">Sequencer.runInBackground(() -&gt; doCalculations());</p>
+            <h2>Check if a background run is finished</h2>
+            <p class="codeBlock">
+                Future future = Sequencer.runInBackground(() -&gt; doCalculations());<br>
+                ...<br>
+                if (future.isFinishedSuccessfully()) {<br>
+                &nbsp;&nbsp;...<br>
+                }
+            </p>
+            <h2>Wait for 500 milliseconds</h2>
+            <p class="codeBlock">Sequencer.waitForMilliseocnds(500);</p>
+		</div>
         <div class="footerDiv">
             <div class="innerFooterDiv">Copyright &copy; Silvan Wyss, 2020</div>
         </div>
