@@ -47,44 +47,33 @@
             </div>
         </div>
         <div class="contentDiv">
-            <h1>Nolix containers</h1>
-            <table>
-                <tr>
-                    <th>
-                        <p>Description</p>
-                        <img src="Icons/info-icon.png" class="icon">
-                    </th>
-                    <td>Provides containers with various search methods.</td>
-                </tr>
-                <tr>
-                    <th>
-                        <p>Packages</p>
-                        <img src="Icons/package-icon.png" class="icon">
-                    </th>
-                    <td>
-                        <a href="Javadoc/ch/nolix/common/container/package-summary.html" target="blank_" class="link">ch.nolix.common.container</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <p>Tutorials</p>
-                        <img src="Icons/book-icon.png" class="icon">
-                    </th>
-                    <td>
-                        <a href="containers_tutorial.html" class="link">Tutorial: Containers</a>                      
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <p>Documents</p>
-                        <img src="Icons/pdf-icon.png" class="icon">
-                    </th>
-                    <td>
-                        <a href="Documents/nolix containers.pdf" target="_blank" class="link">Nolix containers</a>                     
-                    </td>
-                </tr>
-            </table>
-        </div>
+            <a href="nolix_containers.html" class="link">&larr; Nolix containers</a>
+			<h1>Tutorial: Containers</h1>
+			<h2>Get a subset of a LinkedList</h2>
+            <p class="codeBlock">
+                LinkedList&lt;Person&gt; persons;<br>
+                ...<br>
+                LinkedList&lt;Person&gt; seniors = persons.getRefSelected(p -&gt; p.getAge() &gt; 65);
+            </p>
+            <h2>Get some values from the elements of a LinkedList</h2>
+            <p class="codeBlock">
+                LinkedList&lt;Person&gt; persons;<br>
+                ...<br>
+                LinkedList&lt;Integer&gt; ages = persons.to(Person::getAge);
+            </p>
+            <h2>Get an average from the elements of LinkedList</h2>
+            <p class="codeBlock">
+                LinkedLinked&lt;Person&gt; persons;<br>
+                ...<br>
+                double averageAge = persons.getAverageByInt(Person::getAge);
+            </p>
+            <h2>Create a ReadContainer for an array</h2>
+            <p class="codeBlock">
+                String[] namesArray;<br>
+                ...<br>
+                ReadContainer&lt;String&gt; names = new ReadContainer&lt;String&gt;(namesArray);<br>
+            </p>
+		</div>
         <div class="footerDiv">
             <div class="innerFooterDiv">Copyright &copy; Silvan Wyss, 2020</div>
         </div>
