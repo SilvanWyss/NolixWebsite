@@ -47,57 +47,30 @@
             </div>
         </div>
         <div class="contentDiv">
-            <h1>Nolix Validator</h1>
-            <table>
-                <tr>
-                    <th>
-                        <p>Description</p>
-                        <img src="Icons/info-icon.png" class="icon">
-                    </th>
-                    <td>Provides a Validator that can validate arguments.</td>
-                </tr>
-                <tr>
-                    <th>
-                        <p>Packages</p>
-                        <img src="Icons/package-icon.png" class="icon">
-                    </th>
-                    <td>
-                        <a href="Javadoc/ch/nolix/common/validator/package-summary.html" target="blank_" class="link">ch.nolix.common.validator</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <p>Tutorials</p>
-                        <img src="Icons/book-icon.png" class="icon">
-                    </th>
-                    <td>
-                        <a href="validator_tutorial.html" class="link">Tutorial: Validator</a>                      
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <p>Code Examples</p>
-                        <img src="Icons/code-icon.png" class="icon">
-                    </th>
-                    <td>
-                        <a href="validator_code_example.html" class="link">Code example: ValidatorTutorial</a>                      
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <p>Documents</p>
-                        <img src="Icons/pdf-icon.png" class="icon">
-                    </th>
-                    <td>
-                        <ul>
-                            <li><a href="Documents/nolix validator.pdf" target="_blank" class="link">Nolix Validator</a></li>
-                            <li><a href="Documents/nolix exceptions.pdf" target="_blank" class="link">Nolix Exceptions</a></li>
-                        </ul>         
-                    </td>
-                </tr>
-            </table>
-           
-        </div>
+            <a href="nolix_validator.html" class="link">&larr; Nolix Validator</a>
+			<h1>Tutorial: Validator</h1>
+            <h2>Validate that an argument is positive</h2>
+            <p class="codeBlock">
+                public void addAmount(int amount) {<br>
+                &nbsp;&nbsp;Validator.assertThat(amount).isPositive();<br>
+                &nbsp;&nbsp;...<br>
+                }
+            </p>
+            <h2>Include the argument's name in the error message</h2>
+            <p class="codeBlock">
+                public void addAmount(int amount) {<br>
+                &nbsp;&nbsp;Validator.assertThat(amount).thatIsNamed("amount").isPositive();<br>
+                &nbsp;&nbsp;...<br>
+                }
+            </p>
+            <h2>Validate that several strings are not empty</h2>
+            <p class="codeBlock">
+                public void addAmount(String[] names) {<br>
+                &nbsp;&nbsp;Validator.assertThat(names).areNotEmpty();<br>
+                &nbsp;&nbsp;...<br>
+                }
+            </p>
+		</div>
         <div class="footerDiv">
             <div class="innerFooterDiv">Copyright &copy; Silvan Wyss, 2020</div>
         </div>
