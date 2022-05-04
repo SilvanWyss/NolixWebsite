@@ -175,7 +175,7 @@ ul {
 }
 
 .imageLink {
-    opacity: 75%;
+    opacity: 0.75;
 }
 
 .imageLink img {
@@ -183,7 +183,7 @@ ul {
 }
 
 .imageLink:hover {
-    opacity: 25%;
+    opacity: 0.25;
 }
 
 .innerFooterDiv {
@@ -192,6 +192,7 @@ ul {
 }
 
 .innerHeaderDiv {
+    opacity: 0.9; /*This attribute is not expected to be required, but fixes unwanted effects with opacity in Chrome and Edge.*/
     padding-top: 10px;
 }
 
