@@ -89,6 +89,10 @@ ul {
     padding: 20px;
 }
 
+.boxDiv {
+    width: 500px;
+}
+
 .button {
     display: block;
     margin-bottom: 20px;
@@ -179,7 +183,7 @@ ul {
 }
 
 .imageLink img {
-    width: 500px;
+    width: 400px;
 }
 
 .imageLink:hover {
