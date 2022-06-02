@@ -156,7 +156,8 @@ ul {
 
 .headerLinkDiv a {
     margin-right: 50px;
-    color: #A0A0FF;
+    text-decoration: underline;
+    color: #FFFFFF;
 }
 
 .headerSubTitle {
