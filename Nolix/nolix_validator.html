@@ -77,27 +77,6 @@
                     </td>
                 </tr>
             </table>
-            <h2>Validate that an argument is positive</h2>
-            <p class="codeBlock">
-                public void addAmount(int amount) {<br>
-                &nbsp;&nbsp;Validator.assertThat(amount).isPositive();<br>
-                &nbsp;&nbsp;...<br>
-                }
-            </p>
-            <h2>Include the argument's name in the error message</h2>
-            <p class="codeBlock">
-                public void addAmount(int amount) {<br>
-                &nbsp;&nbsp;Validator.assertThat(amount).thatIsNamed("amount").isPositive();<br>
-                &nbsp;&nbsp;...<br>
-                }
-            </p>
-            <h2>Validate that all Strings in a String array are not empty</h2>
-            <p class="codeBlock">
-                public void addAmount(String[] names) {<br>
-                &nbsp;&nbsp;Validator.assertThat(names).areNotEmpty();<br>
-                &nbsp;&nbsp;...<br>
-                }
-            </p>
         </div>
         <div class="footerDiv">
             <div class="innerFooterDiv">Copyright &copy; 2023 Silvan Wyss</div>

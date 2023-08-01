@@ -74,30 +74,6 @@
                     </td>
                 </tr>
             </table>
-            <h2>Create a ReadContainer for an array</h2>
-            <p class="codeBlock">
-                String[] namesArray;<br>
-                ...<br>
-                ReadContainer&lt;String&gt; names = new ReadContainer&lt;String&gt;(namesArray);<br>
-            </p>
-			<h2>Get a subset from a IContainer</h2>
-            <p class="codeBlock">
-                IContaner&lt;Person&gt; persons;<br>
-                ...<br>
-                IContainer&lt;Person&gt; seniors = persons.getRefSelected(p -&gt; p.getAge() &gt; 65);
-            </p>
-            <h2>Get values from the elements of a IContainer</h2>
-            <p class="codeBlock">
-                IContainer&lt;Person&gt; persons;<br>
-                ...<br>
-                IContainer&lt;Integer&gt; ages = persons.to(Person::getAge);
-            </p>
-            <h2>Get average value from the elements of a IContainer</h2>
-            <p class="codeBlock">
-                IContainer&lt;Person&gt; persons;<br>
-                ...<br>
-                double averageAge = persons.getAverageByInt(Person::getAge);
-            </p>
         </div>
         <div class="footerDiv">
             <div class="innerFooterDiv">Copyright &copy; 2023 Silvan Wyss</div>
