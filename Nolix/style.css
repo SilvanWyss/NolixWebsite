@@ -90,6 +90,7 @@ ul {
 }
 
 .boxDiv {
+    float: left;
     width: 500px;
 }
 
@@ -185,6 +186,7 @@ ul {
 
 .imageLink img {
     width: 400px;
+    height: 250px;
 }
 
 .imageLink:hover {
@@ -197,7 +199,6 @@ ul {
 }
 
 .innerHeaderDiv {
-    opacity: 0.9; /*This attribute is not expected to be required, but fixes unwanted effects with opacity in Chrome and Edge.*/
     padding-top: 10px;
 }
 
