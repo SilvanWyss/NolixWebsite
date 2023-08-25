@@ -98,7 +98,7 @@ ul {
     display: block;
     margin-bottom: 20px;
     width: 180px;
-    background-color: #2020FF;
+    background-color: #202020;
     padding: 5px;
     text-align: center;
 }
@@ -109,7 +109,7 @@ ul {
 
 .button:hover {
     transition: 200ms;
-    background-color: #8080FF;
+    background-color: #808080;
 }
 
 .codeBlock {
