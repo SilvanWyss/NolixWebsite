@@ -1,7 +1,7 @@
 * {
     font-size: 20px;
     font-family: 'Calibri';
-    color: #404060;
+    color: #202020;
 }
 
 a {
@@ -53,7 +53,7 @@ table {
 
 td {
     width: 600px;
-    background-color: #E0E0F0;
+    background-color: #E0E0E0;
 }
 
 td, th {
@@ -62,12 +62,12 @@ td, th {
     border-color: #FFFFFF;
     padding: 10px;
     font-size: 20px;
-    color: #404060;
+    color: #202020;
 }
 
 th {
     width: 200px;
-    background-color: #E0E0F0;
+    background-color: #E0E0E0;
 }
 
 tr {
@@ -98,7 +98,7 @@ ul {
     display: block;
     margin-bottom: 20px;
     width: 180px;
-    background-color: #404060;
+    background-color: #2020FF;
     padding: 5px;
     text-align: center;
 }
@@ -114,12 +114,12 @@ ul {
 
 .codeBlock {
     margin-bottom: 20px;
-    background-color: #E0E0F0;
+    background-color: #E0E0E0;
     padding: 10px;
     text-align: left;
     font-family: monospace;
     font-size: 15px;
-    color: #404060;
+    color: #202020;
     cursor: text;
 }
 
@@ -142,13 +142,14 @@ ul {
 
 .footerDiv, .headerDiv {
     width: 100%;
-    background-color: #404060;
+    background-color: #202020;
     opacity: 0.9;
 }
 
 .headerDiv {
     position: fixed;
     z-index: 1;
+    padding-top: 10px;
 }
 
 .headerLinkDiv {
@@ -157,8 +158,6 @@ ul {
 
 .headerLinkDiv a {
     margin-right: 50px;
-    text-decoration: underline;
-    color: #FFFFFF;
 }
 
 .headerSubTitle {
@@ -232,7 +231,7 @@ ul {
 .subNavigationDiv {
     display: none;
     position: fixed;
-    background-color: #404060;
+    background-color: #202020;
     padding-top: 10px;
     padding-bottom: 10px;
 }
