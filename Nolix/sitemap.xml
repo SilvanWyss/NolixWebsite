@@ -1,58 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://nolix.ch/download_and_import.html</loc>
-    <lastmod>2022-01-01</lastmod>
+    <loc>http://nolix.ch/download.html</loc>
+    <lastmod>2025-08-02</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>http://nolix.ch/index.html</loc>
-    <lastmod>2022-01-01</lastmod>
+    <lastmod>2025-08-02</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>http://nolix.ch/library_structure.html</loc>
-    <lastmod>2022-01-01</lastmod>
-    <priority>0.50</priority>
-  </url>
-  <url>
-    <loc>http://nolix.ch/licenses.html</loc>
-    <lastmod>2022-01-01</lastmod>
+    <lastmod>2025-08-02</lastmod>
     <priority>0.50</priority>
   </url>
   <url>
     <loc>http://nolix.ch/nolix_containers.html</loc>
-    <lastmod>2022-01-01</lastmod>
+    <lastmod>2025-08-02</lastmod>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>http://nolix.ch/nolix_flow_controller.html</loc>
+    <lastmod>2025-08-02</lastmod>
     <priority>0.50</priority>
   </url>
   <url>
     <loc>http://nolix.ch/nolix_fractals.html</loc>
-    <lastmod>2022-01-01</lastmod>
-    <priority>0.50</priority>
-  </url>
-  <url>
-    <loc>http://nolix.ch/nolix_sequencer.html</loc>
-    <lastmod>2022-01-01</lastmod>
+    <lastmod>2025-08-02</lastmod>
     <priority>0.50</priority>
   </url>
   <url>
     <loc>http://nolix.ch/nolix_validator.html</loc>
-    <lastmod>2022-01-01</lastmod>
+    <lastmod>2025-08-02</lastmod>
     <priority>0.50</priority>
   </url>
   <url>
     <loc>http://nolix.ch/nolix_web_applications.html</loc>
-    <lastmod>2022-01-01</lastmod>
+    <lastmod>2025-08-02</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>http://nolix.ch/release_archive.html</loc>
-    <lastmod>2022-01-01</lastmod>
+    <lastmod>2025-08-02</lastmod>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>http://nolix.ch/Javadoc/overview-summary.html</loc>
-    <lastmod>2022-01-01</lastmod>
+    <loc>http://nolix.ch/release_notes.html</loc>
+    <lastmod>2025-08-02</lastmod>
     <priority>0.50</priority>
   </url>
 </urlset>
