@@ -184,12 +184,12 @@ ul {
     height: 50px;
 }
 
-.navigationDiv {
-    overflow: hidden;
+.mediumImage {
+    width: 500px;
 }
 
-.smallImage {
-    width: 500px;
+.navigationDiv {
+    overflow: hidden;
 }
 
 .subNavigationDiv {
