@@ -36,6 +36,11 @@ p {
     max-width: 1000px;
 }
 
+pre {
+    margin: 0px;
+    font-family: 'Courier New';
+}
+
 table {
     border-collapse: collapse;
     margin-bottom: 50px;

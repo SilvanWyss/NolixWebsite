@@ -17,9 +17,9 @@
                 </div>
                 <div class="navigationDiv">
                     <div class="tab">
-                        <div class="tabHeader">&#x25BC Start</div>
+                        <div class="tabHeader">&#x25BC Overview</div>
                         <div class="subNavigationDiv">
-                            <a href="index.html" class="subNavigationLink">Home</a>
+                            <a href="index.html" class="subNavigationLink">Introduction</a>
                             <a href="download.html" class="subNavigationLink">Download</a>
                             <a href="release_notes.html" class="subNavigationLink">Release notes</a>
                             <a href="library_structure.html" class="subNavigationLink">Library structure</a>
@@ -44,17 +44,101 @@
             </div>
         </div>         
         <div class="contentDiv">
-            <h1>Nolix Java library</h1>
-            <p>
-                Nolix provides useful features for Java applications.
-                Nolix feels comfortable - not technical.
-            </p>
-            <br>
-            <ul>
-                <li>Simple to include, simple to use, simple to move</li>
-                <li>Code first, no magic</li>
-                <li>Object-oriented by heart</li>
-            </ul>
+            <h1>Introduction</h1>
+            <table>
+                <tr>
+                    <th>
+                        <p>Description</p>
+                        <img src="Icons/info-icon.png" alt="info icon" class="icon">
+                    </th>
+                    <td>
+                        Nolix is a Java library that provides useful features for Java applications.
+                        Nolix feels comfortable - not technical.
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <p>Advantages</p>
+                        <img src="Icons/magic-wand-icon.png" alt="package icon" class="icon">
+                    </th>
+                    <td>
+                        <ul>
+                            <li>Simple to include, simple to use, simple to move</li>
+                            <li>Code first, no magic</li>
+                            <li>Object-oriented by heart</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <h2>Inclusion</h2>
+            <table>
+                <tr>
+                    <th>
+                        <p>Gradle</p>
+                        <img src="Icons/gradle-icon.png" alt="gradle icon" class="icon">
+                    </th>
+                    <td>
+                        <pre>implementation 'ch.nolix:nolix:0.0.0'</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <p>Maven</p>
+                        <img src="Icons/maven-icon.png" alt="gradle icon" class="icon">
+                    </th>
+                    <td>
+                        <pre>
+&lt;dependency&gt;
+    &lt;groupId&gt;ch.nolix&lt;/groupId&gt;
+    &lt;artifactId&gt;nolix&lt;/artifactId&gt;
+    &lt;version&gt;0.0.0&lt;/version&gt;
+    &lt;scope&gt;compile&lt;/scope&gt;
+&lt;/dependency&gt;</pre>
+                    </td>
+                </tr>
+            </table>
+            <h2>Dependencies</h2>
+            <table>
+                <tr>
+                    <th>
+                        <p>Gradle</p>
+                        <img src="Icons/gradle-icon.png" alt="gradle icon" class="icon">
+                    </th>
+                    <td>
+                        <pre>
+implementation 'com.microsoft.sqlserver:mssql-jdbc:13.4.0.jre11'
+implementation 'com.tngtech.archunit:archunit:1.5.0'
+implementation 'io.netty:netty-all:4.2.17.Final'</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <p>Maven</p>
+                        <img src="Icons/maven-icon.png" alt="gradle icon" class="icon">
+                    </th>
+                    <td>
+                        <pre>
+&lt;dependency&gt;
+    &lt;groupId&gt;com.microsoft.sqlserver&lt;/groupId&gt;
+    &lt;artifactId&gt;mssql-jdbc&lt;/artifactId&gt;
+    &lt;version&gt;13.4.0.jre11&lt;/version&gt;
+    &lt;scope&gt;compile&lt;/scope&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;com.tngtech.archunit&lt;/groupId&gt;
+    &lt;artifactId&gt;archunit&lt;/artifactId&gt;
+    &lt;version&gt;1.5.0&lt;/version&gt;
+    &lt;scope&gt;compile&lt;/scope&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;io.netty&lt;/groupId&gt;
+    &lt;artifactId&gt;netty-all&lt;/artifactId&gt;
+    &lt;version&gt;4.2.17.Final&lt;/version&gt;
+    &lt;scope&gt;compile&lt;/scope&gt;
+&lt;/dependency&gt;</pre>
+                    </td>
+                </tr>
+            </table>
         </div>
         <div class="footerDiv">
             <div class="innerFooterDiv">Copyright &copy by Silvan Wyss. All rights reserved.</div>
