@@ -75,16 +75,6 @@ ul {
     list-style-type:disc;
 }
 
-.blockLink {
-    display: block;
-}
-
-.borderDiv {
-    border-style: solid;
-    border-width: 1px;
-    padding: 20px;
-}
-
 .boxDiv {
     float: left;
     width: 500px;
@@ -116,14 +106,6 @@ ul {
     position: fixed;
     z-index: 1;
     padding-top: 10px;
-}
-
-.headerLinkDiv {
-    margin-bottom: 10px;
-}
-
-.headerLinkDiv a {
-    margin-right: 50px;
 }
 
 .headerSubTitle {
@@ -165,11 +147,11 @@ ul {
     padding-top: 10px;
 }
 
-.link, .blockLink {
+.link {
     color: #2020FF;
 }
 
-.link:hover, .blockLink:hover {
+.link:hover {
     transition: 200ms;
     text-decoration: underline;
 }
@@ -178,10 +160,6 @@ ul {
     float: left;
     margin-right: 50px;
     height: 50px;
-}
-
-.mediumImage {
-    width: 500px;
 }
 
 .navigationDiv {
@@ -228,7 +206,7 @@ ul {
     display: block;
 }
 
-.tabHeader, .currentTabHeader {
+.tabHeader {
     transition: 200ms;
     width: 300px;
     padding-top: 2px;
@@ -236,10 +214,6 @@ ul {
     padding-left: 10px;
     font-size: 25px;
     color: #FFFFFF;
-}
-
-.textLine {
-    margin-top: 20px;
 }
 
 .titleDiv {
